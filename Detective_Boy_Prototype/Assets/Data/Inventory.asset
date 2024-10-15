@@ -13,4 +13,10 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   itemDatabase: {fileID: 11400000, guid: 96ce28dc547ac41839d1513f7b7bf4df, type: 2}
-  inventoryList: []
+  inventoryList:
+  - itemId: 2
+    itemName: Pizza
+    itemDescription: Pizza yuuum
+    itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    allowMultiple: 0
+    amount: 1
