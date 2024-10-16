@@ -5,6 +5,9 @@ using UnityEngine.EventSystems;
 
 public static class Extensions
 {
+    public static bool isExamining = false;
+    public static bool isTalking = false;
+
     public static Item CopyItem(Item _item)
     {
         Item newItem = new Item(_item.ItemId, _item.ItemName, _item.ItemDescription, _item.ItemSprite, _item.AllowMultiple);

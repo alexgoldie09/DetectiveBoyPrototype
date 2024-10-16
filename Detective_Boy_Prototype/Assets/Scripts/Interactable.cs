@@ -10,7 +10,8 @@ public class Interactable : MonoBehaviour
     [SerializeField] private GameObject displayUI; // Reference to the interactable text
     [SerializeField] private TextMeshProUGUI displayText; // Reference to the display text
     [SerializeField] private string defaultMessage = ""; // Reference to the message for text
-    [SerializeField] Actions[] actions; // Reference to interactable actions
+    [SerializeField] private Actions[] actions; // Reference to interactable actions
+    [SerializeField] private Camera mainCam; // Reference to main cam
 
     private void Start()
     {
@@ -20,6 +21,11 @@ public class Interactable : MonoBehaviour
         if(player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+
+        if(mainCam == null)
+        {
+            mainCam = Camera.main;
         }
     }
 
@@ -33,10 +39,11 @@ public class Interactable : MonoBehaviour
 
     private void Interact()
     {
+        displayUI.transform.rotation = Quaternion.LookRotation(transform.position - mainCam.transform.position);
+
         if (Input.GetKeyDown(KeyCode.E) && CheckDistanceToPlayer() < interactionDistance)
         {
             displayUI.SetActive(false);
-            PlayerController.instance.IsTalking = true;
             StartCoroutine(ExecuteActionList());
         }
     }
