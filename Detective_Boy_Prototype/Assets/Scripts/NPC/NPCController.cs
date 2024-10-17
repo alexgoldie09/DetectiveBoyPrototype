@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEditor.Progress;
 
 public class NPCController : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Animator anim; // Assign the NPC's Animator component
     [SerializeField] private NavMeshAgent agent; // Reference to NPC's navmesh
+    [SerializeField] private int suspectId; // Reference to the NPC suspect ID
+    [SerializeField] private bool isSuspect = false; // Reference to if the NPC is a suspect
 
     [Header("Patrol variables")]
     [SerializeField] private Transform player; // Assign the player's transform in the inspector
@@ -29,6 +32,11 @@ public class NPCController : MonoBehaviour
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+
+        if(suspectId <= 0)
+        {
+            suspectId = Random.Range(1, 20000);
         }
 
         if (patrolPoints.Length > 0)
@@ -121,4 +129,9 @@ public class NPCController : MonoBehaviour
 
     // Function to check distance between interactable and player
     private float CheckDistanceToPlayer() => Vector3.Distance(transform.position, player.position);
+
+    #region Getters and Setters
+    public int SuspectId { get { return suspectId; } set { suspectId = value; } }
+    public bool IsSuspect => isSuspect;
+    #endregion
 }

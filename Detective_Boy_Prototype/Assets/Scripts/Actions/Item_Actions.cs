@@ -32,6 +32,7 @@ public class Item_Actions : Actions
         // Check if give item is true, then give the item
         if (canGiveItem)
         {
+            Debug.Log("I am giving item");
             // Check if own the item
             if (itemAmountOwned > 0)
             {
@@ -41,19 +42,31 @@ public class Item_Actions : Actions
                     // Pass the item, and invoke actions
                     DataManager.instance.Inventory.ModifyItemAmount(currentItem, amount, true);
                     Extensions.RunActions(giveActions);
-
+                    // Pass the suspect ID
+                    NPCController npc = GetComponent<NPCController>();
+                    if (npc != null && npc.IsSuspect)
+                    {
+                        DataManager.instance.SuspectFound(npc.SuspectId);
+                    }
                 }
                 else if(!currentItem.AllowMultiple && itemAmountOwned == 1)
                 {
                     // Remove the item from inventory, and invoke actions
                     DataManager.instance.Inventory.ModifyItemAmount(currentItem, itemAmountOwned, true);
                     Extensions.RunActions(giveActions);
+                    // Pass the suspect ID
+                    NPCController npc = GetComponent<NPCController>();
+                    if (npc != null && npc.IsSuspect)
+                    {
+                        DataManager.instance.SuspectFound(npc.SuspectId);
+                    }
                 }
-                else
-                {
-                    // Do not have the item
-                    Extensions.RunActions(doNotGiveActions);
-                }
+            }
+            else
+            {
+                Debug.Log("You do not have the item.");
+                // Do not have the item
+                Extensions.RunActions(doNotGiveActions);
             }
         }
         // else receive item

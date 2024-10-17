@@ -25,6 +25,8 @@ public class DataManager : MonoBehaviour
 
     [Header("Data")]
     [SerializeField] private Inventory inventory; // Reference to the inventory
+    [SerializeField] private List<NPCController> suspectsList; // Reference to the suspects
+    private int suspectCount; // Reference to how many suspects have been found
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +40,22 @@ public class DataManager : MonoBehaviour
         
     }
 
+    public void SuspectFound(int _suspectId)
+    {
+        Debug.Log("You found suspect: " + _suspectId);
+        foreach (NPCController suspect in suspectsList)
+        {
+            if (_suspectId == suspect.SuspectId)
+            {
+                Debug.Log("Suspect #" + suspectCount +  " gone.");
+                suspectCount++;
+                suspect.gameObject.SetActive(false);
+            }
+        }
+    }
+
     #region Getters and Setters
     public Inventory Inventory => inventory;
+    public List<NPCController> SuspectsList => suspectsList;
     #endregion
 }
