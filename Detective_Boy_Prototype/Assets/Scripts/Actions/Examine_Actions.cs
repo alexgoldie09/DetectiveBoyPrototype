@@ -6,9 +6,12 @@ using UnityEngine.XR;
 
 public class Examine_Actions : Actions
 {
-    [Header("Variables")]
+    [Header("Camera variables")]
     [SerializeField] private CinemachineFreeLook thirdPersonCam; // Reference to third person cam
     [SerializeField] private CinemachineVirtualCamera firstPersonCam; // Reference to first person cam
+    [SerializeField] private LayerMask thirdPersonCullingMask; // Set this in the inspector (e.g. default, custom layers)
+    [SerializeField] private LayerMask firstPersonCullingMask; // Set this in the inspector
+    [Header("Examine variables")]
     [SerializeField] private Transform itemHolder; // Empty GameObject in front of the camera for item positioning
     [SerializeField] private float rotSpeed = 100f;  // Speed of rotation
 
@@ -16,11 +19,14 @@ public class Examine_Actions : Actions
     private Vector3 origPos; // Reference to original position
     private Quaternion origRot; //  Reference to original rotation
     private Rigidbody rb; // Reference to rigidbody
+    private Camera mainCam; // Reference to the main camera
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        mainCam = Camera.main;
     }
+
     public override void Act()
     {
         Extensions.isExamining = true;
@@ -29,6 +35,7 @@ public class Examine_Actions : Actions
         thirdPersonCam.Priority = 0;  // Lower priority to switch out third person cam
         firstPersonCam.gameObject.SetActive(true); // Activate cam
         firstPersonCam.Priority = 10; // Raise priority to switch to first person view
+        mainCam.cullingMask = firstPersonCullingMask; // Switch culling masks
         StartCoroutine(ExamineItem());
     }
 
@@ -44,9 +51,6 @@ public class Examine_Actions : Actions
         {
             rb.isKinematic = true;
         }
-
-        // Grab camera reference
-        Camera mainCam = Camera.main;
 
         // Enable cursor
         Cursor.lockState = CursorLockMode.Confined;
@@ -69,6 +73,7 @@ public class Examine_Actions : Actions
                 firstPersonCam.Priority = 0; // Deactivate first-person cam
                 firstPersonCam.gameObject.SetActive(false); // Activate cam
                 thirdPersonCam.Priority = 10; // Reactivate FreeLook cam
+                mainCam.cullingMask = thirdPersonCullingMask; // Switch culling masks back
 
                 // Disable cursor
                 Cursor.lockState = CursorLockMode.Locked;
