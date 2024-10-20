@@ -24,7 +24,7 @@ public class ItemDatabaseEditor : Editor
         //base.OnInspectorGUI();
         if(GUILayout.Button("Add Item"))
         {
-            Item newItem = new Item(s_items.arraySize, "", "",null,false);
+            Item newItem = new Item(s_items.arraySize, "", "",null,false,false);
             source.AddItem(newItem);
         }
 
@@ -71,6 +71,8 @@ public class ItemDatabaseEditor : Editor
         EditorGUILayout.PropertyField(_item.FindPropertyRelative("allowMultiple"));
 
         GUILayout.EndHorizontal();
+
+        EditorGUILayout.PropertyField(_item.FindPropertyRelative("isReward"));
 
         GUILayout.EndVertical();
     }

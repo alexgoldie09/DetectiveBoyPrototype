@@ -10,7 +10,7 @@ public static class Extensions
 
     public static Item CopyItem(Item _item)
     {
-        Item newItem = new Item(_item.ItemId, _item.ItemName, _item.ItemDescription, _item.ItemSprite, _item.AllowMultiple);
+        Item newItem = new Item(_item.ItemId, _item.ItemName, _item.ItemDescription, _item.ItemSprite, _item.AllowMultiple, _item.IsReward);
 
         return newItem;
     }

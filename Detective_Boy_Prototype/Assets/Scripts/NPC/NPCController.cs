@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
-using static UnityEditor.Progress;
 
 public class NPCController : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Animator anim; // Assign the NPC's Animator component
     [SerializeField] private NavMeshAgent agent; // Reference to NPC's navmesh
-    [SerializeField] private int suspectId; // Reference to the NPC suspect ID
+    [SerializeField] private int npcId; // Reference to the NPC suspect ID
     [SerializeField] private bool isSuspect = false; // Reference to if the NPC is a suspect
 
     [Header("Patrol variables")]
@@ -23,6 +22,14 @@ public class NPCController : MonoBehaviour
     private bool isWaiting = false; // Reference to if the NPC is waiting
     private bool playerInRange = false; // Reference to if the player is in range
 
+    private void Awake()
+    {
+        if (npcId <= 0)
+        {
+            npcId = Random.Range(1, 20000);
+        }
+    }
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -32,11 +39,6 @@ public class NPCController : MonoBehaviour
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
-        }
-
-        if(suspectId <= 0)
-        {
-            suspectId = Random.Range(1, 20000);
         }
 
         if (patrolPoints.Length > 0)
@@ -131,7 +133,7 @@ public class NPCController : MonoBehaviour
     private float CheckDistanceToPlayer() => Vector3.Distance(transform.position, player.position);
 
     #region Getters and Setters
-    public int SuspectId { get { return suspectId; } set { suspectId = value; } }
+    public int NPCId { get { return npcId; } set { npcId = value; } }
     public bool IsSuspect => isSuspect;
     #endregion
 }

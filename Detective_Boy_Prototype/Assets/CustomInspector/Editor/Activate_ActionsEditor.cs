@@ -13,7 +13,6 @@ public class Activate_ActionsEditor : Editor
     {
         source = (Activate_Actions)target;
         s_customGameObjects = serializedObject.FindProperty("customGameObjects");
-        
     }
 
     public override void OnInspectorGUI()
@@ -37,15 +36,23 @@ public class Activate_ActionsEditor : Editor
         {
             GUILayout.BeginHorizontal("box");
 
-            EditorGUILayout.PropertyField(_customList.GetArrayElementAtIndex(i).FindPropertyRelative("customGO"), new GUIContent("GameObject: "));
+            GUILayout.BeginVertical();
 
-            GUILayout.BeginVertical(GUILayout.Width(25f));
+EditorGUILayout.PropertyField(_customList.GetArrayElementAtIndex(i).FindPropertyRelative("customGO"), new GUIContent("GameObject: "));
+
+            EditorGUILayout.PropertyField(_customList.GetArrayElementAtIndex(i).FindPropertyRelative("activateTime"), new GUIContent("Time to activate: "));
+
+            GUILayout.BeginHorizontal();
+
+            GUILayout.FlexibleSpace();
             EditorGUILayout.PropertyField(_customList.GetArrayElementAtIndex(i).FindPropertyRelative("activeStatus"), GUIContent.none,GUILayout.Width(25f));
 
             if(GUILayout.Button("x", GUILayout.Width(20f)))
             {
                 s_customGameObjects.DeleteArrayElementAtIndex(i);
             }
+
+            GUILayout.EndHorizontal();
 
             GUILayout.EndVertical();
 

@@ -46,7 +46,7 @@ public class Item_Actions : Actions
                     NPCController npc = GetComponent<NPCController>();
                     if (npc != null && npc.IsSuspect)
                     {
-                        DataManager.instance.SuspectFound(npc.SuspectId);
+                        DataManager.instance.SuspectRevealed(npc.NPCId);
                     }
                 }
                 else if(!currentItem.AllowMultiple && itemAmountOwned == 1)
@@ -58,7 +58,7 @@ public class Item_Actions : Actions
                     NPCController npc = GetComponent<NPCController>();
                     if (npc != null && npc.IsSuspect)
                     {
-                        DataManager.instance.SuspectFound(npc.SuspectId);
+                        DataManager.instance.SuspectRevealed(npc.NPCId);
                     }
                 }
             }
@@ -72,26 +72,53 @@ public class Item_Actions : Actions
         // else receive item
         else
         {
-            // Check if the item can be multiples
-            if(currentItem.AllowMultiple)
+            NPCController npc = GetComponent<NPCController>();
+            Clue clue = GetComponent<Clue>();
+            if (npc != null && !npc.IsSuspect)
             {
-                DataManager.instance.Inventory.ModifyItemAmount(currentItem,amount);
-                Extensions.RunActions(receiveActions);
-            }
-            // Else if we dont allow any multiples
-            else if(!currentItem.AllowMultiple)
-            {
-                if(itemAmountOwned == 1)
+                if (currentItem.IsReward && DataManager.instance.CanGiveReward(npc.NPCId))
+                {
+                    ReceiveItem(itemAmountOwned);
+                }
+                else
                 {
                     // Already have, invoke actions
                     Extensions.RunActions(doNotReceiveActions);
                 }
-                else
-                {
-                    // Add the item and invoke actions
-                    DataManager.instance.Inventory.ModifyItemAmount(currentItem, 1);
-                    Extensions.RunActions(receiveActions);
-                }
+            }
+            else if (clue != null)
+            {
+                ReceiveItem(itemAmountOwned);
+            }
+            else
+            {
+                // Already have, invoke actions
+                Extensions.RunActions(doNotReceiveActions);
+            }
+        }
+    }
+
+    private void ReceiveItem(int _itemAmountOwned)
+    {
+        // Check if the item can be multiples
+        if (currentItem.AllowMultiple)
+        {
+            DataManager.instance.Inventory.ModifyItemAmount(currentItem, amount);
+            Extensions.RunActions(receiveActions);
+        }
+        // Else if we dont allow any multiples
+        else if (!currentItem.AllowMultiple)
+        {
+            if (_itemAmountOwned == 1)
+            {
+                // Already have, invoke actions
+                Extensions.RunActions(doNotReceiveActions);
+            }
+            else
+            {
+                // Add the item and invoke actions
+                DataManager.instance.Inventory.ModifyItemAmount(currentItem, 1);
+                Extensions.RunActions(receiveActions);
             }
         }
     }

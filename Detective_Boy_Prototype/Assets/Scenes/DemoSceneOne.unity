@@ -2104,6 +2104,7 @@ MonoBehaviour:
     itemDescription: Odd ball
     itemSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 0
+    isReward: 0
     amount: 0
 --- !u!114 &406589007
 MonoBehaviour:
@@ -2423,7 +2424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   agent: {fileID: 0}
-  suspectId: 0
+  npcId: 0
   isSuspect: 0
   player: {fileID: 0}
   patrolPoints: []
@@ -2529,7 +2530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messages:
-  - 'Vicky: You already have the pizza.'
+  - 'Vicky: I have nothing to give you.'
   enableDialog: 0
   interrogateMessage: 
   accuseMessage: 
@@ -2548,6 +2549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messages:
+  - 'Vicky: Thank you for solving the mystery!'
   - 'Vicky: Here''s your pizza.'
   enableDialog: 0
   interrogateMessage: 
@@ -2582,6 +2584,7 @@ MonoBehaviour:
     itemDescription: Pizza yuuum
     itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 0
+    isReward: 1
     amount: 0
 --- !u!1 &453807032
 GameObject:
@@ -3095,8 +3098,10 @@ MonoBehaviour:
   customGameObjects:
   - customGO: {fileID: 906476380}
     activeStatus: 1
+    activateTime: 0
   - customGO: {fileID: 548736660}
     activeStatus: 0
+    activateTime: 0
 --- !u!114 &548736664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7502,6 +7507,7 @@ MonoBehaviour:
     itemDescription: Cardboard box
     itemSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 1
+    isReward: 0
     amount: 0
 --- !u!114 &1268340330
 MonoBehaviour:
@@ -8116,6 +8122,7 @@ MonoBehaviour:
     itemDescription: Cardboard box
     itemSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 1
+    isReward: 0
     amount: 0
 --- !u!114 &1421086936
 MonoBehaviour:
@@ -8563,6 +8570,7 @@ MonoBehaviour:
     itemDescription: Odd ball
     itemSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 0
+    isReward: 0
     amount: 0
 --- !u!43 &1496303428
 Mesh:
@@ -10945,8 +10953,10 @@ GameObject:
   - component: {fileID: 1946263236}
   - component: {fileID: 1946263235}
   - component: {fileID: 1946263234}
-  - component: {fileID: 1946263233}
+  - component: {fileID: 1946263242}
   - component: {fileID: 1946263232}
+  - component: {fileID: 1946263241}
+  - component: {fileID: 1946263243}
   m_Layer: 0
   m_Name: SuspectNPC
   m_TagString: Untagged
@@ -10992,25 +11002,6 @@ MonoBehaviour:
   accuseMessage: 
   interrogateActions: []
   accuseActions: []
---- !u!114 &1946263233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1946263230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 389726a6524564b4f879806ef5aa6a8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  messages:
-  - 'Malcolm: How did you know it was me!'
-  enableDialog: 0
-  interrogateMessage: 
-  accuseMessage: 
-  interrogateActions: []
-  accuseActions: []
 --- !u!114 &1946263234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11027,7 +11018,7 @@ MonoBehaviour:
   canGiveItem: 1
   amount: 1
   giveActions:
-  - {fileID: 1946263233}
+  - {fileID: 1946263242}
   doNotGiveActions:
   - {fileID: 1946263232}
   receiveActions: []
@@ -11039,6 +11030,7 @@ MonoBehaviour:
     itemDescription: Odd ball
     itemSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 0
+    isReward: 0
     amount: 0
 --- !u!114 &1946263235
 MonoBehaviour:
@@ -11074,7 +11066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   agent: {fileID: 0}
-  suspectId: 0
+  npcId: 0
   isSuspect: 1
   player: {fileID: 0}
   patrolPoints: []
@@ -11167,6 +11159,59 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1946263241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946263230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389726a6524564b4f879806ef5aa6a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - How did you know it was me!
+  enableDialog: 0
+  interrogateMessage: 
+  accuseMessage: 
+  interrogateActions: []
+  accuseActions: []
+--- !u!114 &1946263242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946263230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd5811bd8f0924ff198fd6c5c4e2742d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animList:
+  - triggerName: Cry
+    invokeDelay: 0
+  actionList:
+  - {fileID: 1946263241}
+  - {fileID: 1946263243}
+--- !u!114 &1946263243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946263230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75f4bd5587c094fc0bdc53d20cb34a39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customGameObjects:
+  - customGO: {fileID: 1946263230}
+    activeStatus: 0
+    activateTime: 12
 --- !u!1 &1970992501
 GameObject:
   m_ObjectHideFlags: 0
@@ -14548,7 +14593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
   agent: {fileID: 0}
-  suspectId: 0
+  npcId: 0
   isSuspect: 0
   player: {fileID: 0}
   patrolPoints:

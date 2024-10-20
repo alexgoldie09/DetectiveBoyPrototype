@@ -372,6 +372,7 @@
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.32f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.32f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Actions/Activate_Actions.cs"
+"Assets/Scripts/Actions/Animation_Actions.cs"
 "Assets/Scripts/Actions/Examine_Actions.cs"
 "Assets/Scripts/Actions/Item_Actions.cs"
 "Assets/Scripts/Actions/Message_Actions.cs"
