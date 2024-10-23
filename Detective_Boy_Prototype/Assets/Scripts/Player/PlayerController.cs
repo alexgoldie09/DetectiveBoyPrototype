@@ -4,25 +4,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    //public static PlayerController instance { get; private set; }
-
-    //private void Awake()
-    //{
-    //    // If an instance already exists and it's not this one, destroy the new one
-    //    if (instance != null && instance != this)
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //    else
-    //    {
-    //        // Assign this as the instance
-    //        instance = this;
-
-    //        // Optionally, ensure this object persists across scenes
-    //        DontDestroyOnLoad(gameObject);
-    //    }
-    //}
-
     [Header("References")]
     [SerializeField] private Transform orientation; // Reference to which way the player is orientated
     [SerializeField] private Rigidbody rb; // Reference to player's rigidbody

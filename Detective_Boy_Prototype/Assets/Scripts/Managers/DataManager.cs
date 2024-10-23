@@ -22,13 +22,20 @@ public class DataManager : MonoBehaviour
             // Optionally, ensure this object persists across scenes
             DontDestroyOnLoad(gameObject);
         }
+
+        LevelManager = GetComponentInChildren<LevelManager>();
     }
 
-    [Header("Data")]
+    [Header("Inventory")]
     [SerializeField] private Inventory inventory; // Reference to the inventory
+
+    [Header("Game NPCs")]
     [SerializeField] private List<NPCController> suspectsList; // Reference to the suspects
     private Dictionary<int, NPCController> npcDictionary = new Dictionary<int, NPCController>();
     private List<int> suspectIdNumbers = new List<int>(); // Reference to suspect ID numbers
+
+    public LevelManager LevelManager { get; private set; } // Reference to level manager
+    public string PrevSceneName { get; private set; } // Reference to the previous scene
 
     // Start is called before the first frame update
     void Start()
@@ -36,39 +43,15 @@ public class DataManager : MonoBehaviour
         // Find all NPCController components in the scene
         NPCController[] allNPCs = FindObjectsOfType<NPCController>();
 
-        // Populate the dictionary
-        foreach (NPCController npc in allNPCs)
-        {
-            // Check if the NPCId is not already in the dictionary to avoid duplicate keys
-            if (!npcDictionary.ContainsKey(npc.NPCId))
-            {
-                npcDictionary.Add(npc.NPCId, npc);
-                Debug.Log($"Added NPC with ID: {npc.NPCId}");
-            }
-            else
-            {
-                Debug.LogWarning($"NPC with ID {npc.NPCId} already exists in the dictionary.");
-            }
-        }
+        PopulateNPCDictionary(allNPCs);
+
+        PopulateSuspectList(allNPCs);
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-
-    public void SuspectRevealed(int _suspectId)
-    {
-        Debug.Log("You found suspect: " + _suspectId);
-        foreach (NPCController suspect in suspectsList)
-        {
-            if (_suspectId == suspect.NPCId)
-            {
-                suspectIdNumbers.Add(_suspectId);
-                Debug.Log("Suspect #" + _suspectId+  " has been found.");
-            }
-        }
     }
 
     //public void SuspectRemoved(int _suspectId)
@@ -115,8 +98,61 @@ public class DataManager : MonoBehaviour
         return false;
     }
 
+    #region Populate game data
+    private void PopulateSuspectList(NPCController[] allNPCs)
+    {
+        // Populate the suspects list
+        foreach (NPCController npc in allNPCs)
+        {
+            // Check if the NPC is not already in the list to avoid dupicates and is a suspect
+            if (!suspectsList.Contains(npc) && npc.IsSuspect)
+            {
+                suspectsList.Add(npc);
+                Debug.Log($"Added NPC with ID: {npc.NPCId} as suspect.");
+            }
+            else if (suspectsList.Contains(npc))
+            {
+                Debug.LogWarning($"NPC with ID {npc.NPCId} already exists in the suspect list.");
+            }
+        }
+    }
+
+    private void PopulateNPCDictionary(NPCController[] allNPCs)
+    {
+        // Populate the dictionary
+        foreach (NPCController npc in allNPCs)
+        {
+            // Check if the NPCId is not already in the dictionary to avoid duplicate keys
+            if (!npcDictionary.ContainsKey(npc.NPCId))
+            {
+                npcDictionary.Add(npc.NPCId, npc);
+                Debug.Log($"Added NPC with ID: {npc.NPCId}");
+            }
+            else
+            {
+                Debug.LogWarning($"NPC with ID {npc.NPCId} already exists in the dictionary.");
+            }
+        }
+    }
+
+    public void SuspectRevealed(int _suspectId)
+    {
+        Debug.Log("You found suspect: " + _suspectId);
+        foreach (NPCController suspect in suspectsList)
+        {
+            if (_suspectId == suspect.NPCId)
+            {
+                suspectIdNumbers.Add(_suspectId);
+                Debug.Log("Suspect #" + _suspectId + " has been found.");
+            }
+        }
+    }
+    #endregion
+
     #region Getters and Setters
     public Inventory Inventory => inventory;
     public List<NPCController> SuspectsList => suspectsList;
+
+    public void SetPrevSceneName(string _name) => PrevSceneName = _name;
     #endregion
 }
