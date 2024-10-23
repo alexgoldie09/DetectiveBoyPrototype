@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -18,8 +19,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [Header("Gameobjects")]
     public Interactable[] allInteractables; // Array of all interactables in the scene
     public Clue[] allClues; // Array of all clues in the scene
+
+    [Header("Spawner")]
+    [SerializeField] private List<Spawner> spawnEntries = new List<Spawner>();
+    private GameObject player; // Reference to the player
 
     private void Start()
     {
@@ -29,12 +35,18 @@ public class GameManager : MonoBehaviour
         // Find all Clues in the scene when the scene starts
         allClues = FindObjectsOfType<Clue>(true);
 
+        // Find player
+        player = GameObject.FindGameObjectWithTag("Player");
+
         // Add to dictionary (if required)
         PopulateDataManager();
 
         // Load their states after finding them
         LoadAllInteractableStates();
         LoadAllClueStates();
+
+        // Reposition player on spawn
+        Reposition();
     }
 
     //public void SuspectRevealed(int _suspectId)
@@ -47,6 +59,18 @@ public class GameManager : MonoBehaviour
     //        Debug.Log("Suspect #" + _suspectId + " has been found.");
     //    }
     //}
+
+    private void Reposition()
+    {
+        for(int i = 0; i < spawnEntries.Count; i++)
+        {
+            if(DataManager.instance.PrevSceneName == spawnEntries[i].PrevSceneName)
+            {
+                player.transform.position = spawnEntries[i].SpawnPos;
+                player.transform.rotation = Quaternion.LookRotation(spawnEntries[i].SpawnDir);
+            }
+        }
+    }
 
     private void PopulateDataManager()
     {
@@ -196,5 +220,19 @@ public class GameManager : MonoBehaviour
         return null; // Return null if not found
     }
 
+    #endregion
+}
+
+[System.Serializable]
+public class Spawner
+{
+    [SerializeField] private string prevSceneName;
+    [SerializeField] private Vector3 spawnPos;
+    [SerializeField] private Vector3 spawnDir;
+
+    #region Getters and Setters
+    public string PrevSceneName => prevSceneName;
+    public Vector3 SpawnPos => spawnPos;
+    public Vector3 SpawnDir => spawnDir;
     #endregion
 }
