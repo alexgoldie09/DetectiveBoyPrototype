@@ -10,7 +10,8 @@ public class ChangeScene_Actions : Actions
     public override void Act()
     {
         DataManager.instance.SetPrevSceneName(SceneManager.GetActiveScene().name);
-
+        GameManager.instance.SaveAllInteractableStates();
+        GameManager.instance.SaveAllClueStates();
         DataManager.instance.LevelManager.SceneLoad(sceneTarget);   
     }
 }

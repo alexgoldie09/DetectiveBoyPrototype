@@ -43,10 +43,10 @@ public class Item_Actions : Actions
                     DataManager.instance.Inventory.ModifyItemAmount(currentItem, amount, true);
                     Extensions.RunActions(giveActions);
                     // Pass the suspect ID
-                    NPCController npc = GetComponent<NPCController>();
+                    Interactable npc = GetComponent<Interactable>();
                     if (npc != null && npc.IsSuspect)
                     {
-                        DataManager.instance.SuspectRevealed(npc.NPCId);
+                        //DataManager.instance.SuspectRevealed(npc.NPCId);
                     }
                 }
                 else if(!currentItem.AllowMultiple && itemAmountOwned == 1)
@@ -55,10 +55,10 @@ public class Item_Actions : Actions
                     DataManager.instance.Inventory.ModifyItemAmount(currentItem, itemAmountOwned, true);
                     Extensions.RunActions(giveActions);
                     // Pass the suspect ID
-                    NPCController npc = GetComponent<NPCController>();
+                    Interactable npc = GetComponent<Interactable>();
                     if (npc != null && npc.IsSuspect)
                     {
-                        DataManager.instance.SuspectRevealed(npc.NPCId);
+                        //DataManager.instance.SuspectRevealed(npc.NPCId);
                     }
                 }
             }
@@ -72,11 +72,11 @@ public class Item_Actions : Actions
         // else receive item
         else
         {
-            NPCController npc = GetComponent<NPCController>();
+            Interactable npc = GetComponent<Interactable>();
             Clue clue = GetComponent<Clue>();
             if (npc != null && !npc.IsSuspect)
             {
-                if (currentItem.IsReward && DataManager.instance.CanGiveReward(npc.NPCId))
+                if (currentItem.IsReward) //&& DataManager.instance.CanGiveReward(npc.NPCId))
                 {
                     ReceiveItem(itemAmountOwned);
                 }

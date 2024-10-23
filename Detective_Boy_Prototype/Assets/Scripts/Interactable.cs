@@ -5,11 +5,19 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    [SerializeField] private Transform player; // Reference to the player's transform
+    [Header("Gameobject info")]
+    [SerializeField] private int id; // Reference to the interactable's Id
+    [SerializeField] private bool isNPC; // Reference to whether this is a NPC or object
+    [SerializeField] private bool isSuspect; // Reference to whether this object is a suspect
+
+    [Header("Interaction variables")]
     [SerializeField] private float interactionDistance = 2f; // Set the distance threshold
     [SerializeField] private GameObject displayUI; // Reference to the interactable text
     [SerializeField] private TextMeshProUGUI displayText; // Reference to the display text
     [SerializeField] private string defaultMessage = ""; // Reference to the message for text
+
+    [Header("References")]
+    [SerializeField] private Transform player; // Reference to the player's transform
     [SerializeField] private Actions[] actions; // Reference to interactable actions
     [SerializeField] private Camera mainCam; // Reference to main cam
 
@@ -82,4 +90,10 @@ public class Interactable : MonoBehaviour
 
     // Function to check distance between interactable and player
     private float CheckDistanceToPlayer() => Vector3.Distance(transform.position, player.position);
+
+    #region Getters and Setters
+    public int Id { get { return id; } set { id = value; } }
+    public bool IsNPC { get { return isNPC; } set { isNPC = value; } }
+    public bool IsSuspect { get { return isSuspect; } set { isSuspect = value; } }
+    #endregion
 }

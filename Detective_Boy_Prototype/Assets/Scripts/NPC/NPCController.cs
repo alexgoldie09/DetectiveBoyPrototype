@@ -9,8 +9,6 @@ public class NPCController : MonoBehaviour
     [Header("References")]
     [SerializeField] private Animator anim; // Assign the NPC's Animator component
     [SerializeField] private NavMeshAgent agent; // Reference to NPC's navmesh
-    [SerializeField] private int npcId; // Reference to the NPC suspect ID
-    [SerializeField] private bool isSuspect = false; // Reference to if the NPC is a suspect
 
     [Header("Patrol variables")]
     [SerializeField] private Transform player; // Assign the player's transform in the inspector
@@ -18,17 +16,9 @@ public class NPCController : MonoBehaviour
     [SerializeField] private float interactionDistance = 5f; // Distance within which the NPC stops and looks at the player
     [SerializeField] private float waitTime = 2f; // Time to wait at each point
 
-    private int currentPointIndex = 0; // Reference to the current patrol point
+    private int lastPatrolPointIndex = -1; // Store last patrol point index
     private bool isWaiting = false; // Reference to if the NPC is waiting
     private bool playerInRange = false; // Reference to if the player is in range
-
-    private void Awake()
-    {
-        if (npcId <= 0)
-        {
-            npcId = Random.Range(1, 20000);
-        }
-    }
 
     // Start is called before the first frame update
     private void Start()
@@ -36,39 +26,36 @@ public class NPCController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
 
-        if (player == null)
-        {
-            player = GameObject.FindGameObjectWithTag("Player").transform;
-        }
+        player = GameObject.FindGameObjectWithTag("Player")?.transform;
 
         if (patrolPoints.Length > 0)
         {
-            // Start patrolling to the first point
-            agent.SetDestination(patrolPoints[currentPointIndex].position);
-            anim.SetBool("isWalking", true); // Set the NPC to walking animation
+            MoveToRandomPatrolPoint(); // Start by moving to a random point
         }
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if (CheckDistanceToPlayer() < interactionDistance)
+        if (player == null) return; // Ensure player is not null
+
+        float distanceToPlayer = CheckDistanceToPlayer();
+        if (distanceToPlayer < interactionDistance)
         {
-            StopAndLookAtPlayer(); // Stop and look at the player
+            StopAndLookAtPlayer();
             playerInRange = true;
         }
         else if (playerInRange)
         {
-            ResumePatrol(); // Resume patrol if the player leaves the interaction distance
+            ResumePatrol();
             playerInRange = false;
         }
         else if (!isWaiting && !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
-            if (patrolPoints.Length > 0)
-            {
-                StartCoroutine(WaitAtPoint()); // Continue patrol as normal
-            }
+            StartCoroutine(WaitAtPoint()); // Wait at the current point
         }
+
+        UpdateAnimation();
 
         //// Update animator based on NPC movement
         //if (agent.velocity.sqrMagnitude > 0.1f && !agent.isStopped) // NPC is moving
@@ -103,7 +90,7 @@ public class NPCController : MonoBehaviour
         {
             // Resume movement along patrol points
             agent.isStopped = false;
-            agent.SetDestination(patrolPoints[currentPointIndex].position);
+            MoveToRandomPatrolPoint(); // Move to a new random patrol point
             anim.SetBool("isWalking", true); // Switch to walk animation
         }
     }
@@ -119,21 +106,40 @@ public class NPCController : MonoBehaviour
         // Wait for the specified time
         yield return new WaitForSeconds(waitTime);
 
-        // Move to the next patrol point
-        currentPointIndex = (currentPointIndex + 1) % patrolPoints.Length;
-        agent.SetDestination(patrolPoints[currentPointIndex].position);
-
-        // NPC resumes walking animation
-        anim.SetBool("isWalking", true);
+        MoveToRandomPatrolPoint(); // Choose a new random point after waiting
 
         isWaiting = false;
     }
 
+    private void MoveToRandomPatrolPoint()
+    {
+        if (patrolPoints.Length > 0)
+        {
+            int randomIndex;
+
+            // Ensure the new index is different from the last
+            do
+            {
+                randomIndex = Random.Range(0, patrolPoints.Length);
+            } while (randomIndex == lastPatrolPointIndex);
+
+            lastPatrolPointIndex = randomIndex; // Update last patrol point index
+            agent.SetDestination(patrolPoints[randomIndex].position); // Move to the random patrol point
+        }
+    }
+
+    private void UpdateAnimation()
+    {
+        if (agent.velocity.sqrMagnitude > 0.1f && !agent.isStopped)
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
+    }
+
     // Function to check distance between interactable and player
     private float CheckDistanceToPlayer() => Vector3.Distance(transform.position, player.position);
-
-    #region Getters and Setters
-    public int NPCId { get { return npcId; } set { npcId = value; } }
-    public bool IsSuspect => isSuspect;
-    #endregion
 }
