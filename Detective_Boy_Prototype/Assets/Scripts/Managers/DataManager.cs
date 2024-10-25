@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System.Security.Cryptography;
 
 public class DataManager : MonoBehaviour
 {
@@ -29,12 +30,11 @@ public class DataManager : MonoBehaviour
     [Header("Inventory")]
     [SerializeField] private Inventory inventory; // Reference to the inventory
 
-    //[SerializeField] private List<NPCData> suspectsList; // Reference to the suspects
-    //private Dictionary<int, NPCController> npcDictionary = new Dictionary<int, NPCController>();
-    //private Dictionary<int, NPCData> npcDictionary = new Dictionary<int, NPCData>();
     // Dictionary for storing all game object data (both NPCs and other objects)
     private Dictionary<int, IGameObjectData> gameObjectDataDict = new Dictionary<int, IGameObjectData>();
-    private List<int> suspectIdNumbers = new List<int>(); // Reference to suspect ID numbers
+
+    // Dictionary to store quests
+    public Dictionary<int, Quest> quests = new Dictionary<int, Quest>();
 
     public LevelManager LevelManager { get; private set; } // Reference to level manager
     public string PrevSceneName { get; private set; } // Reference to the previous scene
@@ -51,66 +51,19 @@ public class DataManager : MonoBehaviour
         
     }
 
-    //public void SuspectRemoved(int _suspectId)
-    //{
-    //    // Find the npc with passed argument
-    //    NPCController npcToRemove = suspectsList.Find(npc => npc.NPCId == _suspectId);
+    #region Quest data
 
-    //    // If the item exists, remove it
-    //    if (npcToRemove != null)
-    //    {
-    //        suspectsList.Remove(npcToRemove);
-    //        Debug.Log("Suspect: " + npcToRemove.gameObject.name + " has been removed.");
-    //    }
-    //}
+    public void RevealSuspect(int _questId)
+    {
+        if (quests.ContainsKey(_questId))
+        {
+            quests[_questId].SuspectRevealed = true;
+        }
+    }
 
-    //public bool CanGiveReward(int _rewardId)
-    //{
-    //    if (npcDictionary.ContainsKey(_rewardId))
-    //    {
-    //        Debug.Log($"NPC with ID {_rewardId} exist in the dictionary.");
-    //        // Check if any ID from npcIds exists in npcControllers
-    //        foreach (int suspectId in suspectIdNumbers)
-    //        {
-    //            // Check if there is an NPCController with this ID
-    //            bool exists = suspectsList.Any(npc => npc.NPCId == suspectId);
+    #endregion
 
-    //            if (exists)
-    //            {
-    //                Debug.Log($"NPC with ID {suspectId} exists in the list of NPCControllers.");
-    //                return true;
-    //            }
-    //            else
-    //            {
-    //                Debug.LogWarning($"No NPC with ID {suspectId} found in the list of NPCControllers.");
-    //                return false;
-    //            }
-    //        }
-    //    }
-    //    else
-    //    {
-    //        Debug.LogWarning("NPC IDs do not exist.");
-    //        return false;
-    //    }
-    //    return false;
-    //}
-
-    #region Populate game data
-    //// Function to add suspect data (only adds, no save logic)
-    //public void AddSuspect(NPCData _npc)
-    //{
-    //    // Check if the NPC is not already in the list to avoid dupicates and is a suspect
-    //    if (!suspectsList.Contains(_npc) && _npc.isSuspect)
-    //    {
-    //        suspectsList.Add(_npc);
-    //        Debug.Log($"Added NPC with ID: {_npc.npcId} as suspect.");
-    //    }
-    //    else if (suspectsList.Contains(_npc))
-    //    {
-    //        Debug.LogWarning($"NPC with ID {_npc.npcId} already exists in the suspect list.");
-    //    }
-    //}
-
+    #region Gameobject data
     // Function to add NPC data into the dictionary (only adds, no save logic)
     public void AddGameObjectToDictionary(int _id, IGameObjectData _gameObjectData)
     {
@@ -120,20 +73,6 @@ public class DataManager : MonoBehaviour
             Debug.Log($"Added game object with ID: {_id}");
         }
     }
-
-    //public void SuspectRevealed(int _suspectId)
-    //{
-    //    Debug.Log("You found suspect: " + _suspectId);
-    //    foreach (NPCData suspect in suspectsList)
-    //    {
-    //        if (_suspectId == suspect.npcId)
-    //        {
-    //            suspectIdNumbers.Add(_suspectId);
-    //            Debug.Log("Suspect #" + _suspectId + " has been found.");
-    //        }
-    //    }
-    //}
-
 
     // Save an NPC or game object by ID
     public void SaveGameObject(int _id, IGameObjectData _gameObjectData)
@@ -176,8 +115,6 @@ public class DataManager : MonoBehaviour
     #region Getters and Setters
     public Inventory Inventory => inventory;
     public Dictionary<int, IGameObjectData> GameObjectDataDict => gameObjectDataDict;
-    public List<int> SuspectIdNumbers => suspectIdNumbers;
-    //public List<NPCController> SuspectsList => suspectsList;
 
     public void SetPrevSceneName(string _name) => PrevSceneName = _name;
     #endregion

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -49,29 +50,6 @@ public class GameManager : MonoBehaviour
         Reposition();
     }
 
-    //public void SuspectRevealed(int _suspectId)
-    //{
-    //    Debug.Log("You found suspect: " + _suspectId);
-
-    //    if (DataManager.instance.NPCDictionary.ContainsKey(_suspectId))
-    //    {
-    //        DataManager.instance.SuspectIdNumbers.Add(_suspectId);
-    //        Debug.Log("Suspect #" + _suspectId + " has been found.");
-    //    }
-    //}
-
-    private void Reposition()
-    {
-        for(int i = 0; i < spawnEntries.Count; i++)
-        {
-            if(DataManager.instance.PrevSceneName == spawnEntries[i].PrevSceneName)
-            {
-                player.transform.position = spawnEntries[i].SpawnPos;
-                player.transform.rotation = Quaternion.LookRotation(spawnEntries[i].SpawnDir);
-            }
-        }
-    }
-
     private void PopulateDataManager()
     {
         // Populate NPC data
@@ -92,6 +70,47 @@ public class GameManager : MonoBehaviour
             DataManager.instance.AddGameObjectToDictionary(clue.ClueId, clueData);
         }
     }
+
+    #region Reward function
+    public bool CanGiveReward(int _questId)
+    {
+        if (DataManager.instance.quests.ContainsKey(_questId))
+        {
+            // Check if all quests are complete
+            bool allComplete = DataManager.instance.quests[_questId].Steps.All(quest => quest.IsComplete);
+
+            if (allComplete)
+            {
+                Debug.Log("All quests are complete!");
+                return true;
+            }
+            else
+            {
+                Debug.Log("Not all quests are complete.");
+                return false;
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Quest does not exist.");
+            return false;
+        }
+    }
+    #endregion
+
+    #region Spawn function
+    private void Reposition()
+    {
+        for (int i = 0; i < spawnEntries.Count; i++)
+        {
+            if (DataManager.instance.PrevSceneName == spawnEntries[i].PrevSceneName)
+            {
+                player.transform.position = spawnEntries[i].SpawnPos;
+                player.transform.rotation = Quaternion.LookRotation(spawnEntries[i].SpawnDir);
+            }
+        }
+    }
+    #endregion
 
     #region Interactable Data Handling
     public void SaveInteractables(int _id)

@@ -24,7 +24,7 @@ public class ItemDatabaseEditor : Editor
         //base.OnInspectorGUI();
         if(GUILayout.Button("Add Item"))
         {
-            Item newItem = new Item(s_items.arraySize, "", "",null,false,false);
+            Item newItem = new Item(s_items.arraySize, "", "",null,false,false,0);
             source.AddItem(newItem);
         }
 
@@ -73,6 +73,8 @@ public class ItemDatabaseEditor : Editor
         GUILayout.EndHorizontal();
 
         EditorGUILayout.PropertyField(_item.FindPropertyRelative("isReward"));
+
+        EditorGUILayout.PropertyField(_item.FindPropertyRelative("questId"));
 
         GUILayout.EndVertical();
     }

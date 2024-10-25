@@ -59,7 +59,6 @@ public class Interactable : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            Debug.Log("Player has entered.");
             displayUI.SetActive(true);
             displayText.text = defaultMessage;
         }
@@ -69,7 +68,6 @@ public class Interactable : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player has left.");
             displayUI.SetActive(false);
         }
     }
@@ -85,7 +83,10 @@ public class Interactable : MonoBehaviour
     private IEnumerator RunAction(int index)
     {
         yield return null;
-        actions[index].Act();
+        if (actions[index] != null)
+        {
+            actions[index].Act();
+        }
     }
 
     // Function to check distance between interactable and player

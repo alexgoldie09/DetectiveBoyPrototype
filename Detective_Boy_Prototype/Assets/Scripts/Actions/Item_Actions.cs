@@ -42,24 +42,12 @@ public class Item_Actions : Actions
                     // Pass the item, and invoke actions
                     DataManager.instance.Inventory.ModifyItemAmount(currentItem, amount, true);
                     Extensions.RunActions(giveActions);
-                    // Pass the suspect ID
-                    Interactable npc = GetComponent<Interactable>();
-                    if (npc != null && npc.IsSuspect)
-                    {
-                        //DataManager.instance.SuspectRevealed(npc.NPCId);
-                    }
                 }
                 else if(!currentItem.AllowMultiple && itemAmountOwned == 1)
                 {
                     // Remove the item from inventory, and invoke actions
                     DataManager.instance.Inventory.ModifyItemAmount(currentItem, itemAmountOwned, true);
                     Extensions.RunActions(giveActions);
-                    // Pass the suspect ID
-                    Interactable npc = GetComponent<Interactable>();
-                    if (npc != null && npc.IsSuspect)
-                    {
-                        //DataManager.instance.SuspectRevealed(npc.NPCId);
-                    }
                 }
             }
             else
@@ -76,7 +64,7 @@ public class Item_Actions : Actions
             Clue clue = GetComponent<Clue>();
             if (npc != null && !npc.IsSuspect)
             {
-                if (currentItem.IsReward) //&& DataManager.instance.CanGiveReward(npc.NPCId))
+                if (currentItem.IsReward && GameManager.instance.CanGiveReward(currentItem.QuestId))
                 {
                     ReceiveItem(itemAmountOwned);
                 }

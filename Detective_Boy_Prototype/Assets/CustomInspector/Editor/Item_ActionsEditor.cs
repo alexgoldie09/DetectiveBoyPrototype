@@ -80,6 +80,7 @@ public class Item_ActionsEditor : Editor
         if (_item.IsReward)
         {
             EditorGUILayout.LabelField("I am a reward!");
+            EditorGUILayout.LabelField("Quest ID: " + _item.QuestId, GUILayout.Width(75f));
         }
 
         GUILayout.EndVertical();

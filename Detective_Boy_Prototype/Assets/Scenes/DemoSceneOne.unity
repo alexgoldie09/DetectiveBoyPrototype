@@ -2140,6 +2140,7 @@ MonoBehaviour:
     itemSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 0
     isReward: 0
+    questId: 0
     amount: 0
 --- !u!114 &406589007
 MonoBehaviour:
@@ -2622,6 +2623,7 @@ MonoBehaviour:
     itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 0
     isReward: 1
+    questId: 120
     amount: 0
 --- !u!1 &453807032
 GameObject:
@@ -3077,6 +3079,7 @@ GameObject:
   - component: {fileID: 548736664}
   - component: {fileID: 548736663}
   - component: {fileID: 548736662}
+  - component: {fileID: 548736669}
   m_Layer: 0
   m_Name: SuspiciousBox
   m_TagString: Untagged
@@ -3162,6 +3165,7 @@ MonoBehaviour:
   actions:
   - {fileID: 548736662}
   - {fileID: 548736663}
+  - {fileID: 548736669}
   mainCam: {fileID: 0}
 --- !u!65 &548736665
 BoxCollider:
@@ -3255,6 +3259,22 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.73560214
   m_Center: {x: -0.0066574803, y: 0.08, z: 1.25}
+--- !u!114 &548736669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548736660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc176ab8c2285445cb5ad9c8e081ed72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questId: 120
+  questSteps: []
+  receiveQuest: 0
+  stepId: 1
 --- !u!1 &586265143
 GameObject:
   m_ObjectHideFlags: 0
@@ -6979,6 +6999,7 @@ MonoBehaviour:
     itemSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 1
     isReward: 0
+    questId: 0
     amount: 0
 --- !u!114 &1268340330
 MonoBehaviour:
@@ -7346,7 +7367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370827620}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.13870122, y: 0, z: 0, w: 0.9903343}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7461,6 +7482,7 @@ MonoBehaviour:
     itemSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 1
     isReward: 0
+    questId: 0
     amount: 0
 --- !u!114 &1421086936
 MonoBehaviour:
@@ -7717,6 +7739,7 @@ GameObject:
   - component: {fileID: 1472440104}
   - component: {fileID: 1472440103}
   - component: {fileID: 1472440102}
+  - component: {fileID: 1472440105}
   m_Layer: 9
   m_Name: Clue
   m_TagString: Untagged
@@ -7901,6 +7924,7 @@ MonoBehaviour:
   doNotGiveActions: []
   receiveActions:
   - {fileID: 1472440103}
+  - {fileID: 1472440105}
   doNotReceiveActions:
   - {fileID: 1472440102}
   itemId: 3
@@ -7911,7 +7935,24 @@ MonoBehaviour:
     itemSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 0
     isReward: 0
+    questId: 0
     amount: 0
+--- !u!114 &1472440105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472440095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc176ab8c2285445cb5ad9c8e081ed72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questId: 120
+  questSteps: []
+  receiveQuest: 0
+  stepId: 2
 --- !u!43 &1496303428
 Mesh:
   m_ObjectHideFlags: 0
@@ -10313,6 +10354,7 @@ GameObject:
   - component: {fileID: 1946263232}
   - component: {fileID: 1946263241}
   - component: {fileID: 1946263243}
+  - component: {fileID: 1946263244}
   m_Layer: 0
   m_Name: SuspectNPC
   m_TagString: Untagged
@@ -10375,6 +10417,7 @@ MonoBehaviour:
   amount: 1
   giveActions:
   - {fileID: 1946263242}
+  - {fileID: 1946263244}
   doNotGiveActions:
   - {fileID: 1946263232}
   receiveActions: []
@@ -10387,6 +10430,7 @@ MonoBehaviour:
     itemSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 0
     isReward: 0
+    questId: 0
     amount: 0
 --- !u!114 &1946263235
 MonoBehaviour:
@@ -10569,6 +10613,22 @@ MonoBehaviour:
   - customGO: {fileID: 1946263230}
     activeStatus: 0
     activateTime: 12
+--- !u!114 &1946263244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946263230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc176ab8c2285445cb5ad9c8e081ed72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questId: 120
+  questSteps: []
+  receiveQuest: 0
+  stepId: 3
 --- !u!1 &1970992501
 GameObject:
   m_ObjectHideFlags: 0
@@ -12738,6 +12798,7 @@ GameObject:
   - component: {fileID: 9036244540471877509}
   - component: {fileID: 9036244540471877510}
   - component: {fileID: 9036244540471877511}
+  - component: {fileID: 9036244540471877512}
   m_Layer: 0
   m_Name: DialogueNPC
   m_TagString: Untagged
@@ -12818,6 +12879,7 @@ MonoBehaviour:
   player: {fileID: 707136991000225669}
   actions:
   - {fileID: 9036244540471877509}
+  - {fileID: 9036244540471877512}
   mainCam: {fileID: 0}
 --- !u!136 &9036244540471877505
 CapsuleCollider:
@@ -12972,6 +13034,28 @@ MonoBehaviour:
   accuseMessage: 
   interrogateActions: []
   accuseActions: []
+--- !u!114 &9036244540471877512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8515427440822306245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc176ab8c2285445cb5ad9c8e081ed72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questId: 120
+  questSteps:
+  - stepId: 1
+    description: Check out box.
+  - stepId: 2
+    description: Take clue.
+  - stepId: 3
+    description: Accuse suspect.
+  receiveQuest: 1
+  stepId: 0
 --- !u!4 &9043139061369251700
 Transform:
   m_ObjectHideFlags: 0
