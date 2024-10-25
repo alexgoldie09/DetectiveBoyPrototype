@@ -64,6 +64,7 @@
     <Compile Include="Assets/Scripts/Base Class/QuestStep.cs" />
     <Compile Include="Assets/Scripts/Managers/DataManager.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
+    <Compile Include="Assets/Scripts/Managers/PuzzleManager.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
     <Compile Include="Assets/Supercyan Character Pack Free Sample/Scripts/AccessoryLogic.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
     <Compile Include="Assets/Supercyan Character Pack Free Sample/Scripts/DemoFree.cs" />
+    <Compile Include="Assets/Scripts/Base Class/KeypadUIController.cs" />
     <Compile Include="Assets/Scripts/Base Class/Item.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
@@ -101,6 +103,7 @@
     <Compile Include="Assets/Scripts/Base Class/Clue.cs" />
     <Compile Include="Assets/Supercyan Character Pack Free Sample/Scripts/AccessoryWearLogic.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets/Keypad/Script/Playsound.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
     <Compile Include="Assets/Scripts/Actions/Item_Actions.cs" />
@@ -1077,6 +1080,10 @@
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{364FBB0E-80E9-49EB-2542-041E9047512C}</Project>
       <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
+      <Project>{B8D2427C-6B59-BB01-23B4-6EC4386133A8}</Project>
+      <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
       <Project>{8A04B1C7-F018-9AE4-F667-BC9E9F378AE5}</Project>

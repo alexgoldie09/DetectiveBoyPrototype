@@ -64,6 +64,7 @@
     <Compile Include="Assets/Scripts/Base Class/QuestStep.cs" />
     <Compile Include="Assets/Scripts/Managers/DataManager.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
+    <Compile Include="Assets/Scripts/Managers/PuzzleManager.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
     <Compile Include="Assets/Supercyan Character Pack Free Sample/Scripts/AccessoryLogic.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_ExampleScript_01.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
     <Compile Include="Assets/Supercyan Character Pack Free Sample/Scripts/DemoFree.cs" />
+    <Compile Include="Assets/Scripts/Base Class/KeypadUIController.cs" />
     <Compile Include="Assets/Scripts/Base Class/Item.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
@@ -101,6 +103,7 @@
     <Compile Include="Assets/Scripts/Base Class/Clue.cs" />
     <Compile Include="Assets/Supercyan Character Pack Free Sample/Scripts/AccessoryWearLogic.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets/Keypad/Script/Playsound.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
     <Compile Include="Assets/Scripts/Actions/Item_Actions.cs" />
