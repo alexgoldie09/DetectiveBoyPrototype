@@ -20,39 +20,21 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
-    [Header("Puzzle Canvas")]
-    [SerializeField] private GameObject canvas; // Reference to canvas UI
-
-    private void Start()
-    {
-        canvas.SetActive(false);
-    }
+    [Header("Puzzle Actions")]
+    [SerializeField] private Actions[] chainedActions; // Reference to chained actions
+    private GameObject currentPuzzleCanvas; // Store the instantiated canvas
 
     private void Update()
     {
-        // Check for the "I" key input to toggle the Canvas
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            ToggleKeypad();
-        }
+       
     }
 
-    // Toggles the Canvas active state
-    private void ToggleKeypad()
+    public void InitiateActions(int _index)
     {
-        bool isActive = canvas.activeSelf;
-        if(isActive)
-        {
-            // Disable cursor
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-        else
-        {
-            // Enable cursor
-            Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = true;
-        }
-        canvas.SetActive(!isActive);
+        chainedActions[_index].Act();
     }
+
+    #region Getters and Setters
+    public GameObject CurrentPuzzleCanvas { get { return currentPuzzleCanvas; } set { currentPuzzleCanvas = value;  } }
+    #endregion
 }

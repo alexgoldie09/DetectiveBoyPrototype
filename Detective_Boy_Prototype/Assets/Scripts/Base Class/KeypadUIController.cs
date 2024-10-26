@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class KeypadUIController : MonoBehaviour
 {
+    public int actionIndex; // Reference to which index to use on the puzzle
     public string correctCode = "3579";   // The correct code
     private string enteredCode = "";      // The code the player enters
-    public Actions[] chainedActions; // Reference to actions
+
 
     public TextMeshProUGUI displayText;              // Reference to the Text UI displaying the code
 
@@ -32,7 +33,7 @@ public class KeypadUIController : MonoBehaviour
     {
         if (enteredCode == correctCode)
         {
-            Unlock();
+            StartCoroutine(Unlock());
         }
         else
         {
@@ -43,6 +44,8 @@ public class KeypadUIController : MonoBehaviour
     private IEnumerator WaitForReset()
     {
         Debug.Log("Incorrect code. Resetting...");
+        enteredCode = "Try again!";
+        UpdateDisplay();
         yield return new WaitForSeconds(1f);
         enteredCode = "";
         UpdateDisplay();
@@ -61,11 +64,22 @@ public class KeypadUIController : MonoBehaviour
         UpdateDisplay();
     }
 
-    void Unlock()
+    private IEnumerator Unlock()
     {
         Debug.Log("Keypad unlocked!");
+        enteredCode = "Unlocked!";
+        UpdateDisplay();
+        yield return new WaitForSeconds(1f);
         Extensions.isExamining = false;
-        // Add any additional unlock logic or animations here
-        Extensions.RunActions(chainedActions);
+        PuzzleManager.instance.InitiateActions(actionIndex);
+        EnableCursor(false);
+        PuzzleManager.instance.CurrentPuzzleCanvas = null;
+    }
+
+    // Manages cursor state based on canvas visibility
+    private void EnableCursor(bool _enable)
+    {
+        Cursor.lockState = _enable ? CursorLockMode.Confined : CursorLockMode.Locked;
+        Cursor.visible = _enable;
     }
 }

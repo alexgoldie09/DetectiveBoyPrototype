@@ -379,6 +379,7 @@
 "Assets/Scripts/Actions/Examine_Actions.cs"
 "Assets/Scripts/Actions/Item_Actions.cs"
 "Assets/Scripts/Actions/Message_Actions.cs"
+"Assets/Scripts/Actions/Puzzle_Actions.cs"
 "Assets/Scripts/Actions/Quest_Actions.cs"
 "Assets/Scripts/Base Class/Actions.cs"
 "Assets/Scripts/Base Class/Clue.cs"
