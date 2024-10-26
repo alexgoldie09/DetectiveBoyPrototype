@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<Spawner> spawnEntries = new List<Spawner>();
     private GameObject player; // Reference to the player
 
+    [Header("Music players")]
+    [SerializeField] private Actions musicActions; // Reference for music
+
     private void Start()
     {
         // Find all NPCs in the scene when the scene starts
@@ -48,6 +51,8 @@ public class GameManager : MonoBehaviour
 
         // Reposition player on spawn
         Reposition();
+
+        musicActions.Act();
     }
 
     private void PopulateDataManager()

@@ -63,6 +63,7 @@
     <Compile Include="Assets/Scripts/Actions/Animation_Actions.cs" />
     <Compile Include="Assets/Scripts/Base Class/QuestStep.cs" />
     <Compile Include="Assets/Scripts/Managers/DataManager.cs" />
+    <Compile Include="Assets/Scripts/Managers/AudioManager.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
     <Compile Include="Assets/Scripts/Managers/PuzzleManager.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
     <Compile Include="Assets/Scripts/Actions/ChangeScene_Actions.cs" />
     <Compile Include="Assets/Scripts/Base Class/ClueHover.cs" />
+    <Compile Include="Assets/Scripts/Actions/Audio_Actions.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
     <Compile Include="Assets/Scripts/Scriptable Object/ItemDatabase.cs" />
     <Compile Include="Assets/Scripts/Scriptable Object/Inventory.cs" />

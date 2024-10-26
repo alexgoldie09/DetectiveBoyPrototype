@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 7701533256522025149}
   - component: {fileID: 8438826960667403950}
   - component: {fileID: 1129691239325390554}
+  - component: {fileID: 7325801034061393065}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -91,7 +92,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596734993343455206}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -199,6 +200,22 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   groundDrag: 10
+--- !u!114 &7325801034061393065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596734993343455206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff719bbebefd442e855bfefb4eafdc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 5696857d692d44fef9ddf9340846cb43, type: 3}
+  - {fileID: 8300000, guid: 7ab00679556ee4f0883de696c5c58f99, type: 3}
+  isMusic: 0
 --- !u!1 &660191849892281909
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +580,7 @@ GameObject:
   - component: {fileID: 5119036136294420314}
   m_Layer: 7
   m_Name: Orientation
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -819,7 +836,7 @@ GameObject:
   - component: {fileID: 2868579648115184912}
   m_Layer: 7
   m_Name: common_people_male_1
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1154,7 +1171,7 @@ GameObject:
   - component: {fileID: 8502764828947251564}
   m_Layer: 7
   m_Name: basic_rig
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1250,7 +1267,7 @@ GameObject:
   - component: {fileID: 6317246698453882518}
   m_Layer: 7
   m_Name: GroundCheck
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

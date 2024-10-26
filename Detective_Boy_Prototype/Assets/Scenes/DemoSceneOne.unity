@@ -1897,6 +1897,7 @@ Transform:
   - {fileID: 977568599}
   - {fileID: 854144238}
   - {fileID: 801342968}
+  - {fileID: 905981303}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &409575630
@@ -2055,6 +2056,7 @@ GameObject:
   - component: {fileID: 453765464}
   - component: {fileID: 453765463}
   - component: {fileID: 453765462}
+  - component: {fileID: 453765465}
   m_Layer: 0
   m_Name: ItemNPC
   m_TagString: Untagged
@@ -2102,6 +2104,7 @@ MonoBehaviour:
   player: {fileID: 707136991000225669}
   actions:
   - {fileID: 453765464}
+  - {fileID: 453765465}
   mainCam: {fileID: 0}
 --- !u!114 &453765457
 MonoBehaviour:
@@ -2278,6 +2281,23 @@ MonoBehaviour:
     isReward: 1
     questId: 120
     amount: 0
+--- !u!114 &453765465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453765453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff719bbebefd442e855bfefb4eafdc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 113b45684071e4fef8ad812ae79cad29, type: 3}
+  minPitch: 1
+  maxPitch: 1
+  isMusic: 0
 --- !u!1 &453807032
 GameObject:
   m_ObjectHideFlags: 0
@@ -4747,6 +4767,55 @@ Transform:
   - {fileID: 120575814}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &905981302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 905981303}
+  - component: {fileID: 905981304}
+  m_Layer: 0
+  m_Name: BGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &905981303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905981302}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 392703287}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &905981304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905981302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff719bbebefd442e855bfefb4eafdc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: c967cc2822dc74a4788a648ef724d6ba, type: 3}
+  minPitch: 1
+  maxPitch: 1
+  isMusic: 1
 --- !u!1 &906476380
 GameObject:
   m_ObjectHideFlags: 0
@@ -5428,6 +5497,53 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 598349476}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1010069502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1010069504}
+  - component: {fileID: 1010069503}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1010069503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010069502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117a4c26e03ee4e2a8f967380ac56c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxGroup: {fileID: 8774635240984898809, guid: 585fd59fa33de4991b7b891431e6684f, type: 2}
+  audioSourceInstances: 5
+  musicGroup: {fileID: -1610237589644115351, guid: 585fd59fa33de4991b7b891431e6684f, type: 2}
+--- !u!4 &1010069504
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010069502}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1031891572
 GameObject:
@@ -9198,6 +9314,7 @@ GameObject:
   - component: {fileID: 1946263241}
   - component: {fileID: 1946263243}
   - component: {fileID: 1946263244}
+  - component: {fileID: 1946263245}
   m_Layer: 0
   m_Name: SuspectNPC
   m_TagString: Untagged
@@ -9297,6 +9414,7 @@ MonoBehaviour:
   player: {fileID: 707136991000225669}
   actions:
   - {fileID: 1946263234}
+  - {fileID: 1946263245}
   mainCam: {fileID: 0}
 --- !u!114 &1946263236
 MonoBehaviour:
@@ -9472,6 +9590,23 @@ MonoBehaviour:
   questSteps: []
   receiveQuest: 0
   stepId: 3
+--- !u!114 &1946263245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946263230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff719bbebefd442e855bfefb4eafdc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 1551eac16d8f746618e811ded03f4b99, type: 3}
+  minPitch: 1
+  maxPitch: 1
+  isMusic: 0
 --- !u!1 &1970992501
 GameObject:
   m_ObjectHideFlags: 0
@@ -11022,14 +11157,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 596734993343455206, guid: 4661dea832cae114a9b7bd36c95118ee, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3592161141137382968, guid: 4661dea832cae114a9b7bd36c95118ee, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 4145367142467110703, guid: 4661dea832cae114a9b7bd36c95118ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -11070,18 +11197,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6298839958973278677, guid: 4661dea832cae114a9b7bd36c95118ee, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
+    - target: {fileID: 7325801034061393065, guid: 4661dea832cae114a9b7bd36c95118ee, type: 3}
+      propertyPath: maxPitch
+      value: 1.2
       objectReference: {fileID: 0}
-    - target: {fileID: 8192990508603635067, guid: 4661dea832cae114a9b7bd36c95118ee, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
+    - target: {fileID: 7325801034061393065, guid: 4661dea832cae114a9b7bd36c95118ee, type: 3}
+      propertyPath: minPitch
+      value: 0.6
       objectReference: {fileID: 0}
-    - target: {fileID: 9100861158188127662, guid: 4661dea832cae114a9b7bd36c95118ee, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
+    - target: {fileID: 7325801034061393065, guid: 4661dea832cae114a9b7bd36c95118ee, type: 3}
+      propertyPath: audioClips.Array.size
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7325801034061393065, guid: 4661dea832cae114a9b7bd36c95118ee, type: 3}
+      propertyPath: audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ab00679556ee4f0883de696c5c58f99, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11245,6 +11376,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7420334487755492882, guid: fc32f7f90b07b41ae9a32a71dc692e5d, type: 3}
+      propertyPath: musicActions
+      value: 
+      objectReference: {fileID: 905981304}
     - target: {fileID: 7420334487755492882, guid: fc32f7f90b07b41ae9a32a71dc692e5d, type: 3}
       propertyPath: allNPCs.Array.size
       value: 0
@@ -11642,6 +11777,7 @@ GameObject:
   - component: {fileID: 9036244540471877510}
   - component: {fileID: 9036244540471877511}
   - component: {fileID: 9036244540471877512}
+  - component: {fileID: 9036244540471877513}
   m_Layer: 0
   m_Name: DialogueNPC
   m_TagString: Untagged
@@ -11723,6 +11859,7 @@ MonoBehaviour:
   actions:
   - {fileID: 9036244540471877509}
   - {fileID: 9036244540471877512}
+  - {fileID: 9036244540471877513}
   mainCam: {fileID: 0}
 --- !u!136 &9036244540471877505
 CapsuleCollider:
@@ -11899,6 +12036,23 @@ MonoBehaviour:
     description: Accuse suspect.
   receiveQuest: 1
   stepId: 0
+--- !u!114 &9036244540471877513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8515427440822306245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff719bbebefd442e855bfefb4eafdc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 8bf5ab6a18f9d4f389830c76d56f5bd5, type: 3}
+  minPitch: 1
+  maxPitch: 1
+  isMusic: 0
 --- !u!4 &9043139061369251700
 Transform:
   m_ObjectHideFlags: 0
@@ -11947,3 +12101,4 @@ SceneRoots:
   - {fileID: 8212407061509667116}
   - {fileID: 7107966315915325205}
   - {fileID: 465304207}
+  - {fileID: 1010069504}
