@@ -1,3 +1,7 @@
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -105,6 +109,21 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
+
+    private IEnumerator DelayQuit()
+    {
+        yield return new WaitForSeconds(5f);
+        Debug.Log("Quitting game..");
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false; // Stops play mode in the editor
+#else
+        Application.Quit(); // Exits the application in a built version
+#endif
+    }
+    public void QuitGame()
+    {
+        StartCoroutine(DelayQuit());
+    }
 
     #region Spawn function
     private void Reposition()

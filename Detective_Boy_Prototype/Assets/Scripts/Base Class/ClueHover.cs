@@ -9,11 +9,7 @@ public class ClueHover : MonoBehaviour
     [SerializeField] private Camera mainCam; // Reference to the main camera
     [SerializeField] private LayerMask clueLayer;          // Layer mask for clue objects
 
-    [Header("Clue UI")]
-    [SerializeField] private GameObject clueUIPanel;  // The UI panel that shows the clue
-    [SerializeField] private TextMeshProUGUI clueDescriptionText;  // The Text component to display the clue description
-
-    private Clue currentClue;            // Reference to the currently hovered clue object
+    private Clue currentClue = null;            // Reference to the currently hovered clue object
 
 
     private void Start()
@@ -29,11 +25,16 @@ public class ClueHover : MonoBehaviour
         if (Extensions.isExamining)
         {
             DetectClueHover();
+
+            // Check if a clue is currently hovered and if the F key is pressed
+            if (currentClue != null && currentClue.ItemProducedAction != null && Input.GetKeyDown(KeyCode.F))
+            {
+                OnClueInteract();
+            }
         }
         else
         {
-            // Hide the UI if not hovering over any clue object
-            HideClueUI();
+            currentClue?.HideClueUI();
             currentClue = null;
         }
     }
@@ -48,39 +49,34 @@ public class ClueHover : MonoBehaviour
         // Perform the raycast and check if it hits an object on the clue layer
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, clueLayer))
         {
+            // Check if the object hit has a Clue component and is a different clue by ID
             Clue clue = hit.collider.GetComponent<Clue>();
-
-            if (clue != null)
+            if (clue != null && (currentClue == null || currentClue.ClueId != clue.ClueId))
             {
-                // If we're hovering over a clue object, show the clue UI and set the text
-                currentClue = clue;
-                ShowClueUI(currentClue.Description);
+                // Hide the previous clue's UI if there was one
+                currentClue?.HideClueUI();
 
-                if(Input.GetKeyDown(KeyCode.F) && currentClue.ItemProducedAction != null)
-                {
-                    currentClue.ItemProducedAction.Act();
-                    currentClue.gameObject.SetActive(false);
-                }
+                // Update the current clue and show the new clue's UI
+                currentClue = clue;
+                currentClue.ShowClueUI();
             }
         }
         else
         {
-            // Hide the UI if not hovering over any clue object
-            HideClueUI();
+            // Hide the current clue's UI if not hovering over any clue object
+            currentClue?.HideClueUI();
             currentClue = null;
         }
     }
 
-    // Method to display the clue UI with the description
-    private void ShowClueUI(string description)
+    // Method to handle interaction when F key is pressed
+    private void OnClueInteract()
     {
-        clueUIPanel.SetActive(true);
-        clueDescriptionText.text = description;
-    }
-
-    // Method to hide the clue UI
-    private void HideClueUI()
-    {
-        clueUIPanel.SetActive(false);
+        // Call a function here (e.g., show more details, collect the clue, etc.)
+        Debug.Log("Interacting with Clue: " + currentClue.ClueId);
+        currentClue.ItemProducedAction.Act();
+        currentClue.gameObject.SetActive(false);
+        // Example: You could call any function specific to the clue here
+        // currentClue.PerformAction(); // Uncomment if `Clue` has such a function
     }
 }

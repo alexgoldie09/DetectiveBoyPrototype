@@ -29,9 +29,12 @@ public class PuzzleManager : MonoBehaviour
        
     }
 
-    public void InitiateActions(int _index)
+    public void InitiateActions()
     {
-        chainedActions[_index].Act();
+        for(int i = 0; i < chainedActions.Length; i++)
+        {
+            chainedActions[i].Act();
+        }
     }
 
     #region Getters and Setters

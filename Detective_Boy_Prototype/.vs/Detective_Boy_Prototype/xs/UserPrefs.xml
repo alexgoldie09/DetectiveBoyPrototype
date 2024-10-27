@@ -1,40 +1,30 @@
 ﻿<Properties StartupConfiguration="{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Managers/GameManager.cs">
-    <Files>
-      <File FileName="Assets/Scripts/Actions/Examine_Actions.cs" />
-      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="54" Column="1" />
-      <File FileName="Assets/Scripts/Actions/Puzzle_Actions.cs" Line="55" Column="33" />
-      <File FileName="Assets/Scripts/Managers/DataManager.cs" Line="9" Column="5" />
-      <File FileName="Assets/Scripts/Actions/ChangeScene_Actions.cs" NotebookId="1" />
-      <File FileName="Assets/CustomInspector/Editor/ItemDatabaseEditor.cs" NotebookId="1" />
-      <File FileName="Assets/Scripts/Actions/Quest_Actions.cs" NotebookId="1" />
-      <File FileName="Assets/Scripts/Base Class/ClueHover.cs" NotebookId="1" />
-      <File FileName="Assets/Scripts/Base Class/KeypadUIController.cs" Line="48" Column="25" NotebookId="1" />
-      <File FileName="Assets/Scripts/Managers/PuzzleManager.cs" NotebookId="1" />
-      <File FileName="Assets/Scripts/Player/PlayerController.cs" NotebookId="1" />
-      <File FileName="Assets/Scripts/Managers/AudioManager.cs" Line="107" Column="6" NotebookId="1" />
-      <File FileName="Assets/Scripts/Actions/Audio_Actions.cs" Line="23" Column="106" NotebookId="1" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Detective_Boy_Prototype" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="Actions" expanded="True" />
-                <Node name="Managers" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bb9c2fc5-3ee7-45be-85b6-49302b608023" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Actions/Audio_Actions.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Actions/Examine_Actions.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="115" Column="42" />
+      <File FileName="Assets/Scripts/Actions/Puzzle_Actions.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Managers/DataManager.cs" Line="9" Column="5" />
+      <File FileName="Assets/Scripts/Base Class/ClueHover.cs" Line="38" Column="32" />
+      <File FileName="Assets/Scripts/Actions/EndGame_Actions.cs" Line="8" Column="30" />
+      <File FileName="Assets/Scripts/Actions/ChangeScene_Actions.cs" NotebookId="1" />
+      <File FileName="Assets/CustomInspector/Editor/ItemDatabaseEditor.cs" NotebookId="1" />
+      <File FileName="Assets/Scripts/Actions/Quest_Actions.cs" NotebookId="1" />
+      <File FileName="Assets/Scripts/Base Class/KeypadUIController.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Managers/PuzzleManager.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Player/PlayerController.cs" NotebookId="1" />
+      <File FileName="Assets/Scripts/Managers/AudioManager.cs" Line="107" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Actions/Audio_Actions.cs" Line="21" Column="35" NotebookId="1" />
+      <File FileName="Assets/Scripts/Actions/Item_Actions.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Actions/Activate_Actions.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Base Class/Clue.cs" Line="1" Column="1" NotebookId="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4946f485-3ca1-40c8-8315-b465086d0d2e" />
+  <MultiItemStartupConfigurations />
 </Properties>

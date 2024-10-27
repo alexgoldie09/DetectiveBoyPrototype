@@ -584,7 +584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &95343897
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2039,6 +2039,77 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1009750554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &207176129
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1620901931}
+    m_Modifications:
+    - target: {fileID: 2557578636250841742, guid: fc051f995912aaf4897f85ca8d7bc864, type: 3}
+      propertyPath: m_Name
+      value: RedCWHouse (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2557578636250841742, guid: fc051f995912aaf4897f85ca8d7bc864, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551267112807457255, guid: fc051f995912aaf4897f85ca8d7bc864, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551267112807457255, guid: fc051f995912aaf4897f85ca8d7bc864, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551267112807457255, guid: fc051f995912aaf4897f85ca8d7bc864, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551267112807457255, guid: fc051f995912aaf4897f85ca8d7bc864, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551267112807457255, guid: fc051f995912aaf4897f85ca8d7bc864, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551267112807457255, guid: fc051f995912aaf4897f85ca8d7bc864, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551267112807457255, guid: fc051f995912aaf4897f85ca8d7bc864, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551267112807457255, guid: fc051f995912aaf4897f85ca8d7bc864, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551267112807457255, guid: fc051f995912aaf4897f85ca8d7bc864, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551267112807457255, guid: fc051f995912aaf4897f85ca8d7bc864, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fc051f995912aaf4897f85ca8d7bc864, type: 3}
+--- !u!4 &207176130 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5551267112807457255, guid: fc051f995912aaf4897f85ca8d7bc864, type: 3}
+  m_PrefabInstance: {fileID: 207176129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &207176131 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2557578636250841742, guid: fc051f995912aaf4897f85ca8d7bc864, type: 3}
+  m_PrefabInstance: {fileID: 207176129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &208503474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2744,12 +2815,12 @@ GameObject:
   - component: {fileID: 265117498}
   - component: {fileID: 265117497}
   m_Layer: 5
-  m_Name: ClueCanvas
+  m_Name: ClueCanvas2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &265117496
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2967,6 +3038,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271243218}
   m_CullTransparentMesh: 1
+--- !u!1 &272890365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 272890366}
+  m_Layer: 0
+  m_Name: Suspicious NPC
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &272890366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272890365}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2120574691}
+  - {fileID: 1120105770}
+  - {fileID: 534228477}
+  m_Father: {fileID: 598349476}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &294175876
 GameObject:
   m_ObjectHideFlags: 0
@@ -4540,7 +4645,10 @@ MonoBehaviour:
     activeStatus: 1
     activateTime: 0
   - customGO: {fileID: 548736660}
-    activeStatus: 0
+    activeStatus: 1
+    activateTime: 0
+  - customGO: {fileID: 1946263230}
+    activeStatus: 1
     activateTime: 0
   - customGO: {fileID: 453765453}
     activeStatus: 0
@@ -4675,6 +4783,8 @@ GameObject:
   - component: {fileID: 465304207}
   - component: {fileID: 465304208}
   - component: {fileID: 465304209}
+  - component: {fileID: 465304211}
+  - component: {fileID: 465304210}
   m_Layer: 0
   m_Name: PuzzleManager
   m_TagString: Untagged
@@ -4710,7 +4820,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chainedActions:
+  - {fileID: 465304210}
   - {fileID: 465304209}
+  - {fileID: 465304211}
 --- !u!114 &465304209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4727,9 +4839,48 @@ MonoBehaviour:
   - customGO: {fileID: 1063167547}
     activeStatus: 1
     activateTime: 0
+  - customGO: {fileID: 207176131}
+    activeStatus: 0
+    activateTime: 0
   - customGO: {fileID: 1242971488}
     activeStatus: 0
     activateTime: 0
+--- !u!114 &465304210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465304206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389726a6524564b4f879806ef5aa6a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - You hear a faint noise somewhere...
+  enableDialog: 0
+  interrogateMessage: 
+  accuseMessage: 
+  interrogateActions: []
+  accuseActions: []
+--- !u!114 &465304211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465304206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc176ab8c2285445cb5ad9c8e081ed72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questId: 120
+  questSteps: []
+  receiveQuest: 0
+  questCanvas: {fileID: 0}
+  stepId: 4
 --- !u!1 &474076252
 GameObject:
   m_ObjectHideFlags: 0
@@ -5396,6 +5547,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4931211907768612, guid: e88b7bb02ae149940a5a0cddf34fe370, type: 3}
   m_PrefabInstance: {fileID: 532186286}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &534228476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 534228477}
+  m_Layer: 0
+  m_Name: PatrolPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &534228477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534228476}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.97221166, z: -0, w: 0.23410359}
+  m_LocalPosition: {x: -29.7, y: 0, z: -2.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 272890366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &544104117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5548,7 +5730,7 @@ Transform:
   m_GameObject: {fileID: 548736660}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -17.705656, y: 0.37, z: 7.012103}
+  m_LocalPosition: {x: -18.397, y: 0.5, z: 7.012103}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5898,6 +6080,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1081751498}
+  - {fileID: 272890366}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &605199980
@@ -8023,6 +8206,7 @@ GameObject:
   - component: {fileID: 906476388}
   - component: {fileID: 906476387}
   - component: {fileID: 906476386}
+  - component: {fileID: 906476391}
   m_Layer: 0
   m_Name: ExamineItem
   m_TagString: Untagged
@@ -8188,6 +8372,7 @@ MonoBehaviour:
   actions:
   - {fileID: 906476387}
   - {fileID: 906476386}
+  - {fileID: 906476391}
   mainCam: {fileID: 0}
 --- !u!135 &906476389
 SphereCollider:
@@ -8231,6 +8416,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &906476391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906476380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc176ab8c2285445cb5ad9c8e081ed72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questId: 120
+  questSteps: []
+  receiveQuest: 0
+  questCanvas: {fileID: 0}
+  stepId: 3
 --- !u!1 &920960587
 GameObject:
   m_ObjectHideFlags: 0
@@ -9440,15 +9642,17 @@ GameObject:
   - component: {fileID: 1063167553}
   - component: {fileID: 1063167552}
   - component: {fileID: 1063167551}
+  - component: {fileID: 1063167556}
   - component: {fileID: 1063167550}
   - component: {fileID: 1063167549}
+  - component: {fileID: 1063167555}
   m_Layer: 0
   m_Name: SuspiciousBox (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1063167548
 Transform:
   m_ObjectHideFlags: 0
@@ -9458,7 +9662,7 @@ Transform:
   m_GameObject: {fileID: 1063167547}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -20.06, y: 0.37, z: 15.1}
+  m_LocalPosition: {x: -13.95, y: 2.04, z: 15.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9509,9 +9713,8 @@ MonoBehaviour:
   defaultMessage: Press "E"
   player: {fileID: 0}
   actions:
+  - {fileID: 1063167555}
   - {fileID: 1063167549}
-  - {fileID: 0}
-  - {fileID: 0}
   mainCam: {fileID: 0}
 --- !u!135 &1063167551
 SphereCollider:
@@ -9605,6 +9808,52 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063167547}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1063167555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063167547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389726a6524564b4f879806ef5aa6a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - Appears to be a box that smells funny...
+  enableDialog: 0
+  interrogateMessage: 
+  accuseMessage: 
+  interrogateActions: []
+  accuseActions: []
+--- !u!54 &1063167556
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063167547}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &1067808154
 GameObject:
   m_ObjectHideFlags: 0
@@ -11094,6 +11343,37 @@ Transform:
   - {fileID: 1929317707}
   m_Father: {fileID: 430466387}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1120105769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1120105770}
+  m_Layer: 0
+  m_Name: PatrolPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1120105770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120105769}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.97221166, z: -0, w: 0.23410359}
+  m_LocalPosition: {x: -24.6, y: 0, z: -13.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 272890366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1123706439
 GameObject:
   m_ObjectHideFlags: 0
@@ -11673,11 +11953,9 @@ GameObject:
   - component: {fileID: 1242971496}
   - component: {fileID: 1242971495}
   - component: {fileID: 1242971494}
-  - component: {fileID: 1242971493}
   - component: {fileID: 1242971492}
   - component: {fileID: 1242971490}
   - component: {fileID: 1242971498}
-  - component: {fileID: 1242971499}
   m_Layer: 0
   m_Name: PuzzleItem
   m_TagString: Untagged
@@ -11694,7 +11972,7 @@ Transform:
   m_GameObject: {fileID: 1242971488}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.34, y: 1, z: 4.7}
+  m_LocalPosition: {x: -13.27, y: 0.74, z: 14.74}
   m_LocalScale: {x: 0.3, y: 0.5, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11715,7 +11993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messages:
-  - Enter a keycode...
+  - This is the assistant baker's home...
   enableDialog: 0
   interrogateMessage: 
   accuseMessage: 
@@ -11745,33 +12023,6 @@ MonoBehaviour:
   - {fileID: 1242971490}
   - {fileID: 1242971498}
   mainCam: {fileID: 0}
---- !u!54 &1242971493
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1242971488}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!135 &1242971494
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11877,23 +12128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePrefab: {fileID: 6851204184736640214, guid: b852d0a25a66e41f4a264241defa8c1c, type: 3}
---- !u!114 &1242971499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1242971488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc176ab8c2285445cb5ad9c8e081ed72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questId: 0
-  questSteps: []
-  receiveQuest: 0
-  questCanvas: {fileID: 0}
-  stepId: 4
 --- !u!1 &1259758482
 GameObject:
   m_ObjectHideFlags: 0
@@ -13233,14 +13467,13 @@ GameObject:
   - component: {fileID: 1472440098}
   - component: {fileID: 1472440097}
   - component: {fileID: 1472440101}
-  - component: {fileID: 1472440105}
   m_Layer: 9
-  m_Name: Clue
+  m_Name: Clue1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1472440096
 Transform:
   m_ObjectHideFlags: 0
@@ -13273,8 +13506,6 @@ MonoBehaviour:
   clueLayer:
     serializedVersion: 2
     m_Bits: 512
-  clueUIPanel: {fileID: 95343896}
-  clueDescriptionText: {fileID: 830783041}
 --- !u!135 &1472440098
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13360,24 +13591,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clueId: 1
   description: Looks like a code -- "3579"
+  clueUIPanel: {fileID: 95343896}
+  clueDescriptionText: {fileID: 830783041}
   itemProducedAction: {fileID: 0}
---- !u!114 &1472440105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472440095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc176ab8c2285445cb5ad9c8e081ed72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questId: 120
-  questSteps: []
-  receiveQuest: 0
-  questCanvas: {fileID: 0}
-  stepId: 3
 --- !u!1 &1478144117
 GameObject:
   m_ObjectHideFlags: 0
@@ -13576,7 +13792,7 @@ RectTransform:
   m_GameObject: {fileID: 1510960810}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.004999999, y: 0.005, z: 0.009999998}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1863141075}
@@ -13825,7 +14041,7 @@ GameObject:
   - component: {fileID: 1558803263}
   - component: {fileID: 1558803262}
   m_Layer: 5
-  m_Name: DescriptText
+  m_Name: DescriptText2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14137,7 +14353,7 @@ GameObject:
   - component: {fileID: 1590835094}
   - component: {fileID: 1590835093}
   - component: {fileID: 1590835092}
-  - component: {fileID: 1590835091}
+  - component: {fileID: 1590835105}
   m_Layer: 0
   m_Name: NPC2 (1)
   m_TagString: Untagged
@@ -14163,23 +14379,6 @@ Transform:
   - {fileID: 765363775}
   m_Father: {fileID: 899745839}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &1590835091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590835089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc176ab8c2285445cb5ad9c8e081ed72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questId: 120
-  questSteps: []
-  receiveQuest: 0
-  questCanvas: {fileID: 0}
-  stepId: 1
 --- !u!114 &1590835092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14255,6 +14454,7 @@ MonoBehaviour:
   receiveActions:
   - {fileID: 1590835094}
   - {fileID: 1590835092}
+  - {fileID: 1590835105}
   doNotReceiveActions:
   - {fileID: 1590835093}
   - {fileID: 1590835092}
@@ -14440,6 +14640,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1590835105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590835089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75f4bd5587c094fc0bdc53d20cb34a39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customGameObjects:
+  - customGO: {fileID: 1590835089}
+    activeStatus: 0
+    activateTime: 12
 --- !u!1 &1616576778
 GameObject:
   m_ObjectHideFlags: 0
@@ -14459,13 +14675,14 @@ GameObject:
   - component: {fileID: 1616576782}
   - component: {fileID: 1616576781}
   - component: {fileID: 1616576780}
+  - component: {fileID: 1616576790}
   m_Layer: 0
   m_Name: NPC3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1616576779
 Transform:
   m_ObjectHideFlags: 0
@@ -14497,7 +14714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: 113b45684071e4fef8ad812ae79cad29, type: 3}
+  - {fileID: 8300000, guid: 3d1f4d9d07cd4472cb32e95c3ed4d4e5, type: 3}
   minPitch: 1
   maxPitch: 1
   isMusic: 0
@@ -14514,7 +14731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messages:
-  - 'Vicky: I have nothing to give you.'
+  - 'Vicky: Damn my husband where is he...'
   enableDialog: 0
   interrogateMessage: 
   accuseMessage: 
@@ -14533,8 +14750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messages:
-  - 'Vicky: Thank you for solving the mystery!'
-  - 'Vicky: Here''s your pizza.'
+  - 'Vicky: Thank you for bringing the bread Charlie!'
   enableDialog: 0
   interrogateMessage: 
   accuseMessage: 
@@ -14553,19 +14769,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemDatabase: {fileID: 11400000, guid: 96ce28dc547ac41839d1513f7b7bf4df, type: 2}
-  canGiveItem: 0
+  canGiveItem: 1
   amount: 1
-  giveActions: []
-  doNotGiveActions: []
-  receiveActions:
+  giveActions:
+  - {fileID: 1616576780}
   - {fileID: 1616576782}
-  doNotReceiveActions:
+  - {fileID: 1616576790}
+  doNotGiveActions:
+  - {fileID: 1616576780}
   - {fileID: 1616576781}
+  receiveActions: []
+  doNotReceiveActions: []
   itemId: 2
   currentItem:
     itemId: 2
-    itemName: Pizza
-    itemDescription: Pizza yuuum
+    itemName: Bread
+    itemDescription: Bread from Winters
     itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 0
     isReward: 1
@@ -14591,7 +14810,8 @@ MonoBehaviour:
   displayText: {fileID: 1865350497}
   defaultMessage: Press "E"
   player: {fileID: 707136991000225669}
-  actions: []
+  actions:
+  - {fileID: 1616576783}
   mainCam: {fileID: 0}
 --- !u!114 &1616576785
 MonoBehaviour:
@@ -14698,6 +14918,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1616576790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616576778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d51c3900d7f41b8be179b5e3067d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1620901930
 GameObject:
   m_ObjectHideFlags: 0
@@ -14729,6 +14961,7 @@ Transform:
   m_Children:
   - {fileID: 4042812476759948199}
   - {fileID: 1780522221}
+  - {fileID: 207176130}
   - {fileID: 6730717551265357597}
   - {fileID: 71132069}
   - {fileID: 3498092924323086456}
@@ -16731,7 +16964,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -30.483719, y: 0, z: -28.793808, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -17824,6 +18057,8 @@ GameObject:
   - component: {fileID: 1946263237}
   - component: {fileID: 1946263236}
   - component: {fileID: 1946263235}
+  - component: {fileID: 1946263247}
+  - component: {fileID: 1946263246}
   - component: {fileID: 1946263234}
   - component: {fileID: 1946263242}
   - component: {fileID: 1946263232}
@@ -17869,8 +18104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messages:
-  - 'Malcolm: What do you want?'
-  - 'Malcolm: Leave me alone.'
+  - 'Assistant Baker: You have no evidence.'
+  - 'Assistant Baker: Leave me alone.'
   enableDialog: 0
   interrogateMessage: 
   accuseMessage: 
@@ -17894,6 +18129,7 @@ MonoBehaviour:
   giveActions:
   - {fileID: 1946263242}
   - {fileID: 1946263244}
+  - {fileID: 1946263241}
   doNotGiveActions:
   - {fileID: 1946263232}
   receiveActions: []
@@ -17902,7 +18138,7 @@ MonoBehaviour:
   currentItem:
     itemId: 3
     itemName: ClueOne
-    itemDescription: Odd ball
+    itemDescription: Flour Dust
     itemSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 0
     isReward: 0
@@ -17929,7 +18165,7 @@ MonoBehaviour:
   defaultMessage: Press "E"
   player: {fileID: 707136991000225669}
   actions:
-  - {fileID: 1946263234}
+  - {fileID: 1946263247}
   - {fileID: 1946263245}
   mainCam: {fileID: 0}
 --- !u!114 &1946263236
@@ -17947,7 +18183,10 @@ MonoBehaviour:
   anim: {fileID: 0}
   agent: {fileID: 0}
   player: {fileID: 0}
-  patrolPoints: []
+  patrolPoints:
+  - {fileID: 2120574691}
+  - {fileID: 1120105770}
+  - {fileID: 534228477}
   interactionDistance: 5
   waitTime: 10
 --- !u!195 &1946263237
@@ -18050,7 +18289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messages:
-  - How did you know it was me!
+  - 'Assistant Baker: How did you know!'
+  - 'Charlie: Found the flour on the box you touched.'
   enableDialog: 0
   interrogateMessage: 
   accuseMessage: 
@@ -18106,7 +18346,7 @@ MonoBehaviour:
   questSteps: []
   receiveQuest: 0
   questCanvas: {fileID: 0}
-  stepId: 3
+  stepId: 6
 --- !u!114 &1946263245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18124,6 +18364,49 @@ MonoBehaviour:
   minPitch: 1
   maxPitch: 1
   isMusic: 0
+--- !u!114 &1946263246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946263230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389726a6524564b4f879806ef5aa6a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - 'Assistant Baker: Can''t say that I have.'
+  enableDialog: 0
+  interrogateMessage: 
+  accuseMessage: 
+  interrogateActions: []
+  accuseActions: []
+--- !u!114 &1946263247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946263230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389726a6524564b4f879806ef5aa6a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - 'Assistant Baker: Hey Detective, what''s up?'
+  - 'Charlie: Nothing much on a case. Wanted to ask...'
+  enableDialog: 1
+  interrogateMessage: Have you seen the flour?
+  accuseMessage: You took the flour?
+  interrogateActions:
+  - {fileID: 1946263246}
+  - {fileID: 1946263245}
+  accuseActions:
+  - {fileID: 1946263234}
+  - {fileID: 1946263245}
 --- !u!1 &1963280139
 GameObject:
   m_ObjectHideFlags: 0
@@ -18805,10 +19088,12 @@ GameObject:
   - component: {fileID: 2020260469}
   - component: {fileID: 2020260468}
   - component: {fileID: 2020260467}
-  - component: {fileID: 2020260466}
   - component: {fileID: 2020260472}
+  - component: {fileID: 2020260466}
+  - component: {fileID: 2020260474}
+  - component: {fileID: 2020260473}
   m_Layer: 9
-  m_Name: Clue
+  m_Name: Clue2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18846,7 +19131,7 @@ MonoBehaviour:
   questSteps: []
   receiveQuest: 0
   questCanvas: {fileID: 0}
-  stepId: 3
+  stepId: 5
 --- !u!114 &2020260467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18859,9 +19144,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36d2069f0370912498f81ec688e28dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clueId: 1
-  description: Looks like a code -- "3579"
-  itemProducedAction: {fileID: 0}
+  clueId: 8
+  description: Appears to be flour dust...
+  clueUIPanel: {fileID: 265117495}
+  clueDescriptionText: {fileID: 1558803262}
+  itemProducedAction: {fileID: 2020260472}
 --- !u!114 &2020260468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18878,8 +19165,6 @@ MonoBehaviour:
   clueLayer:
     serializedVersion: 2
     m_Bits: 512
-  clueUIPanel: {fileID: 265117495}
-  clueDescriptionText: {fileID: 1558803262}
 --- !u!135 &2020260469
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18963,23 +19248,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 597b4bc9209f74f6681549aa812519c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDatabase: {fileID: 0}
+  itemDatabase: {fileID: 11400000, guid: 96ce28dc547ac41839d1513f7b7bf4df, type: 2}
   canGiveItem: 0
   amount: 0
   giveActions: []
   doNotGiveActions: []
-  receiveActions: []
-  doNotReceiveActions: []
-  itemId: 0
+  receiveActions:
+  - {fileID: 2020260466}
+  - {fileID: 2020260474}
+  doNotReceiveActions:
+  - {fileID: 2020260473}
+  itemId: 3
   currentItem:
-    itemId: 0
-    itemName: 
-    itemDescription: 
-    itemSprite: {fileID: 0}
+    itemId: 3
+    itemName: ClueOne
+    itemDescription: Flour Dust
+    itemSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 0
     isReward: 0
     questId: 0
     amount: 0
+--- !u!114 &2020260473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020260464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389726a6524564b4f879806ef5aa6a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - Cannot access.
+  enableDialog: 0
+  interrogateMessage: 
+  accuseMessage: 
+  interrogateActions: []
+  accuseActions: []
+--- !u!114 &2020260474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020260464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 389726a6524564b4f879806ef5aa6a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - Appears to be flour dust.
+  - '**Received flour dust**'
+  enableDialog: 0
+  interrogateMessage: 
+  accuseMessage: 
+  interrogateActions: []
+  accuseActions: []
 --- !u!1 &2022820038
 GameObject:
   m_ObjectHideFlags: 0
@@ -19760,6 +20087,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4607489187838822, guid: 00e2e59cbc04eab4a982218df54ce70b, type: 3}
   m_PrefabInstance: {fileID: 109678134}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2120574690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2120574691}
+  m_Layer: 0
+  m_Name: PatrolPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2120574691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120574690}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.97221166, z: -0, w: 0.23410359}
+  m_LocalPosition: {x: -21.9, y: 0, z: -1.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 272890366}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2124192166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22412,9 +22770,13 @@ MonoBehaviour:
   - stepId: 2
     description: Check out suspicious box.
   - stepId: 3
-    description: Get code 3579
+    description: Examine clue.
   - stepId: 4
-    description: Get code 79
+    description: Unlock puzzle.
+  - stepId: 5
+    description: Examine box for flour dust.
+  - stepId: 6
+    description: Accuse suspect.
   receiveQuest: 1
   questCanvas: {fileID: 744883150}
   stepId: 0
@@ -22453,7 +22815,7 @@ MonoBehaviour:
     activateTime: 0
   - customGO: {fileID: 8515427440822306245}
     activeStatus: 0
-    activateTime: 2
+    activateTime: 12
 --- !u!4 &9043139061369251700
 Transform:
   m_ObjectHideFlags: 0

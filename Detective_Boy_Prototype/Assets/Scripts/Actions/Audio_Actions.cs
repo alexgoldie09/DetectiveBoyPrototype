@@ -10,21 +10,15 @@ public class Audio_Actions : Actions
 
     private AudioManager manager;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        manager = AudioManager.instance;
-    }
-
     public override void Act()
     {
         if(!isMusic)
         {
-            manager.PlaySfx(audioClips[Random.Range(0, audioClips.Length)], transform, minPitch, maxPitch);
+            AudioManager.instance.PlaySfx(audioClips[Random.Range(0, audioClips.Length)], transform, minPitch, maxPitch);
         }
         else
         {
-            manager.PlayMusic(audioClips[0]);
+            AudioManager.instance.PlayMusic(audioClips[0]);
         }
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class KeypadUIController : MonoBehaviour
 {
-    public int actionIndex; // Reference to which index to use on the puzzle
     public string correctCode = "3579";   // The correct code
     private string enteredCode = "";      // The code the player enters
 
@@ -71,7 +70,7 @@ public class KeypadUIController : MonoBehaviour
         UpdateDisplay();
         yield return new WaitForSeconds(1f);
         Extensions.isExamining = false;
-        PuzzleManager.instance.InitiateActions(actionIndex);
+        PuzzleManager.instance.InitiateActions();
         EnableCursor(false);
         PuzzleManager.instance.CurrentPuzzleCanvas = null;
     }
