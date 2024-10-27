@@ -56,7 +56,7 @@ public class ClueHover : MonoBehaviour
                 currentClue = clue;
                 ShowClueUI(currentClue.Description);
 
-                if(Input.GetKeyDown(KeyCode.F))
+                if(Input.GetKeyDown(KeyCode.F) && currentClue.ItemProducedAction != null)
                 {
                     currentClue.ItemProducedAction.Act();
                     currentClue.gameObject.SetActive(false);

@@ -30,8 +30,8 @@ MonoBehaviour:
     questId: 0
     amount: 0
   - itemId: 2
-    itemName: Pizza
-    itemDescription: Pizza yuuum
+    itemName: Bread
+    itemDescription: Bread from Winters
     itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 0
     isReward: 1
@@ -39,7 +39,7 @@ MonoBehaviour:
     amount: 0
   - itemId: 3
     itemName: ClueOne
-    itemDescription: Odd ball
+    itemDescription: Combination 35
     itemSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 0
     isReward: 0
@@ -47,15 +47,15 @@ MonoBehaviour:
     amount: 0
   - itemId: 4
     itemName: ClueTwo
-    itemDescription: Cardboard box
+    itemDescription: Combination 79
     itemSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-    allowMultiple: 1
+    allowMultiple: 0
     isReward: 0
     questId: 0
     amount: 0
   itemNames:
   - Chicken
   - Key
-  - Pizza
+  - Bread
   - ClueOne
   - ClueTwo

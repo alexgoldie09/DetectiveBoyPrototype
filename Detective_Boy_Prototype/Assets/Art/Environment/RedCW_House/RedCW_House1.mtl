@@ -1,0 +1,36 @@
+# Exported from Nomad Sculpt
+
+newmtl standardSurface7SG
+ map_Kd standardSurface7SG-color.png
+ map_roughness standardSurface7SG-roughness.png
+ map_metallic standardSurface7SG-metallic.png
+
+newmtl phongE1SG
+ map_Kd phongE1SG-color.png
+ map_roughness phongE1SG-roughness.png
+ map_metallic phongE1SG-metallic.png
+
+newmtl standardSurface6SG
+ map_Kd standardSurface6SG-color.png
+ map_roughness standardSurface6SG-roughness.png
+ map_metallic standardSurface6SG-metallic.png
+
+newmtl standardSurface5SG
+ map_Kd standardSurface5SG-color.png
+ map_roughness standardSurface5SG-roughness.png
+ map_metallic standardSurface5SG-metallic.png
+
+newmtl phong3SG
+ map_Kd phong3SG-color.png
+ map_roughness phong3SG-roughness.png
+ map_metallic phong3SG-metallic.png
+
+newmtl blinn2SG
+ map_Kd blinn2SG-color.png
+ map_roughness blinn2SG-roughness.png
+ map_metallic blinn2SG-metallic.png
+
+newmtl lambert5SG
+ map_Kd lambert5SG-color.png
+ map_roughness lambert5SG-roughness.png
+ map_metallic lambert5SG-metallic.png

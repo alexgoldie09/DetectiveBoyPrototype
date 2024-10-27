@@ -22,6 +22,8 @@ public class AudioManager : MonoBehaviour
             // Optionally, ensure this object persists across scenes
             DontDestroyOnLoad(gameObject);
         }
+
+        Init();
     }
 
     [Header("SFX")]
@@ -38,7 +40,7 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        Init();
+        
     }
 
     private void Init()
@@ -108,11 +110,17 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMusic(AudioClip _music)
     {
-        if(musicPlayer.clip == _music)
+        if (_music == null)
         {
+            Debug.Log("Music does not exist");
             return;
         }
-
+        if(musicPlayer.clip == _music)
+        {
+            Debug.Log("Music is the same.");
+            return;
+        }
+        Debug.Log("Music playing...");
         musicPlayer.clip = _music;
         musicPlayer.Play();
     }

@@ -8,8 +8,25 @@ public class Quest_Actions : Actions
     [SerializeField] private int questId; // Reference to quest ID
     [SerializeField] private List<QuestStep> questSteps = new List<QuestStep>(); // Reference to the quest steps
     [SerializeField] private bool receiveQuest; // Reference to whether you are receiving a quest
+    [SerializeField] private GameObject questCanvas; // Reference to the quest icon
     [Header("Completing Step")]
     [SerializeField] private int stepId; // Reference to step to complete
+
+    private void Start()
+    {
+        if (questCanvas != null)
+        {
+            if(receiveQuest)
+            {
+                questCanvas.SetActive(true);
+            }
+            else
+            {
+                questCanvas.SetActive(false);
+            }
+        }
+
+    }
 
     public override void Act()
     {
@@ -18,6 +35,10 @@ public class Quest_Actions : Actions
         {
             AddQuest();
             AddStepsToQuest();
+            if(questCanvas != null)
+            {
+                Destroy(questCanvas);
+            }
         }
         // Else you are completing a step
         else
