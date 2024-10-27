@@ -38,8 +38,8 @@ MonoBehaviour:
     questId: 120
     amount: 0
   - itemId: 3
-    itemName: ClueOne
-    itemDescription: Combination 35
+    itemName: Clue
+    itemDescription: Flour Dust
     itemSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 0
     isReward: 0
@@ -57,5 +57,5 @@ MonoBehaviour:
   - Chicken
   - Key
   - Bread
-  - ClueOne
+  - Clue
   - ClueTwo

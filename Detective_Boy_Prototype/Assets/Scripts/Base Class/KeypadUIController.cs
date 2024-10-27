@@ -71,7 +71,7 @@ public class KeypadUIController : MonoBehaviour
         UpdateDisplay();
         yield return new WaitForSeconds(1f);
         Extensions.isExamining = false;
-        PuzzleManager.instance.InitiateActions(actionIndex);
+        PuzzleManager.instance.InitiateActions();
         EnableCursor(false);
         PuzzleManager.instance.CurrentPuzzleCanvas = null;
     }
