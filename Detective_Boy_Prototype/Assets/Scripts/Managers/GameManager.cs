@@ -52,7 +52,10 @@ public class GameManager : MonoBehaviour
         // Reposition player on spawn
         Reposition();
 
-        musicActions.Act();
+        if (musicActions != null)
+        {
+            musicActions.Act();
+        }
     }
 
     private void PopulateDataManager()
