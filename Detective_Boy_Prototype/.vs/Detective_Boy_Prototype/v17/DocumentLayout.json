@@ -3,100 +3,100 @@
   "WorkspaceRootPath": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Base Class\\ClueHover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Base Class\\ClueHover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Player\\ThirdPersonCam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Player\\ThirdPersonCam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Puzzle_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Actions\\Puzzle_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Examine_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Actions\\Examine_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\PuzzleManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Managers\\PuzzleManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Player\\PlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Player\\PlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Base Class\\KeypadUIController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Base Class\\KeypadUIController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|d:\\personal\\unity projects\\detectiveboyprototype\\detective_boy_prototype\\assets\\scripts\\base class\\cluehover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\base class\\cluehover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Quest_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Actions\\Quest_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Puzzle_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Actions\\Puzzle_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\NPC\\NPCController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\NPC\\NPCController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\PuzzleManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Managers\\PuzzleManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Base Class\\Clue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Base Class\\Clue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Base Class\\KeypadUIController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Base Class\\KeypadUIController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Examine_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Actions\\Examine_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Quest_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Actions\\Quest_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Interactable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Interactable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\NPC\\NPCController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\NPC\\NPCController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\AudioManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Managers\\AudioManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Base Class\\Clue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Base Class\\Clue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Managers\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Interactable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Interactable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Audio_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Actions\\Audio_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\AudioManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Managers\\AudioManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\ChangeScene_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Actions\\ChangeScene_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Managers\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\LevelManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Managers\\LevelManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Audio_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Actions\\Audio_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Player\\PlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Player\\PlayerController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\ChangeScene_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Actions\\ChangeScene_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\DialogueManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Managers\\DialogueManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\LevelManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Managers\\LevelManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Base Class\\Item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Base Class\\Item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\DialogueManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Managers\\DialogueManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\CustomInspector\\Editor\\ItemDatabaseEditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\CustomInspector\\Editor\\ItemDatabaseEditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Base Class\\Item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Base Class\\Item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Message_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Actions\\Message_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{30FAF86F-AE61-3A39-8F3F-F011EB198660}|Assembly-CSharp-Editor.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\CustomInspector\\Editor\\ItemDatabaseEditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30FAF86F-AE61-3A39-8F3F-F011EB198660}|Assembly-CSharp-Editor.csproj|solutionrelative:Assets\\CustomInspector\\Editor\\ItemDatabaseEditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Player\\ThirdPersonCam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Player\\ThirdPersonCam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Message_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Actions\\Message_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\DataManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Managers\\DataManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|d:\\personal\\unity projects\\detectiveboyprototype\\detective_boy_prototype\\assets\\scripts\\managers\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Scriptable Object\\Inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Scriptable Object\\Inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Scriptable Object\\Inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Scriptable Object\\Inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Item_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Actions\\Item_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Item_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Actions\\Item_Actions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Extensions\\Extensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Extensions\\Extensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Extensions\\Extensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|Assembly-CSharp.csproj|solutionrelative:Assets\\Scripts\\Extensions\\Extensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -106,47 +106,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Puzzle_Actions.cs",
-              "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Puzzle_Actions.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Actions\\Puzzle_Actions.cs",
-              "ToolTip": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Puzzle_Actions.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Actions\\Puzzle_Actions.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwAcAAABPAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "NPCController.cs",
+              "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\NPC\\NPCController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\NPCController.cs",
+              "ToolTip": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\NPC\\NPCController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NPC\\NPCController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBQAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T11:17:53.987Z"
+              "WhenOpened": "2024-10-16T23:08:41.597Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PuzzleManager.cs",
-              "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\PuzzleManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\PuzzleManager.cs",
-              "ToolTip": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\PuzzleManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Managers\\PuzzleManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Player\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerController.cs",
+              "ToolTip": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Player\\PlayerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerController.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAA/wAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T11:17:29.292Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "KeypadUIController.cs",
-              "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Base Class\\KeypadUIController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Base Class\\KeypadUIController.cs",
-              "ToolTip": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Base Class\\KeypadUIController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Base Class\\KeypadUIController.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T11:17:07.608Z"
+              "WhenOpened": "2024-10-16T07:50:13.372Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ThirdPersonCam.cs",
+              "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Player\\ThirdPersonCam.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\ThirdPersonCam.cs",
+              "ToolTip": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Player\\ThirdPersonCam.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\ThirdPersonCam.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAwwCAAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T07:50:51.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Examine_Actions.cs",
+              "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Examine_Actions.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Actions\\Examine_Actions.cs",
+              "ToolTip": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Examine_Actions.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Actions\\Examine_Actions.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAmwAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T07:57:05.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Quest_Actions.cs",
+              "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Quest_Actions.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Actions\\Quest_Actions.cs",
+              "ToolTip": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Quest_Actions.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Actions\\Quest_Actions.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAgwBwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T07:52:31.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ClueHover.cs",
               "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Base Class\\ClueHover.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Base Class\\ClueHover.cs",
@@ -159,31 +186,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Quest_Actions.cs",
-              "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Quest_Actions.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Actions\\Quest_Actions.cs",
-              "ToolTip": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Quest_Actions.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Actions\\Quest_Actions.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAgwBwAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "KeypadUIController.cs",
+              "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Base Class\\KeypadUIController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Base Class\\KeypadUIController.cs",
+              "ToolTip": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Base Class\\KeypadUIController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Base Class\\KeypadUIController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T07:52:31.845Z"
+              "WhenOpened": "2024-10-27T11:17:07.608Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "NPCController.cs",
-              "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\NPC\\NPCController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\NPCController.cs",
-              "ToolTip": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\NPC\\NPCController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NPC\\NPCController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBQAAABKAAAAAAAAAA==",
+              "Title": "PuzzleManager.cs",
+              "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\PuzzleManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\PuzzleManager.cs",
+              "ToolTip": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\PuzzleManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\PuzzleManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T23:08:41.597Z"
+              "WhenOpened": "2024-10-27T11:17:29.292Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
+              "Title": "Puzzle_Actions.cs",
+              "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Puzzle_Actions.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Actions\\Puzzle_Actions.cs",
+              "ToolTip": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Puzzle_Actions.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Actions\\Puzzle_Actions.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAcAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T11:17:53.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Clue.cs",
               "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Base Class\\Clue.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Base Class\\Clue.cs",
@@ -195,19 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Examine_Actions.cs",
-              "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Examine_Actions.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Actions\\Examine_Actions.cs",
-              "ToolTip": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Examine_Actions.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Actions\\Examine_Actions.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAmwEYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T07:57:05.642Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Interactable.cs",
               "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Interactable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Interactable.cs",
@@ -219,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "AudioManager.cs",
               "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\AudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\AudioManager.cs",
@@ -231,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "GameManager.cs",
               "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\GameManager.cs",
@@ -243,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Audio_Actions.cs",
               "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Audio_Actions.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Actions\\Audio_Actions.cs",
@@ -255,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "ChangeScene_Actions.cs",
               "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\ChangeScene_Actions.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Actions\\ChangeScene_Actions.cs",
@@ -267,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "LevelManager.cs",
               "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\LevelManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\LevelManager.cs",
@@ -279,19 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PlayerController.cs",
-              "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Player\\PlayerController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerController.cs",
-              "ToolTip": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Player\\PlayerController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerController.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAwwAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T07:50:13.372Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "DialogueManager.cs",
               "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Managers\\DialogueManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\DialogueManager.cs",
@@ -303,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Item.cs",
               "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Base Class\\Item.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Base Class\\Item.cs",
@@ -315,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "ItemDatabaseEditor.cs",
               "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\CustomInspector\\Editor\\ItemDatabaseEditor.cs",
               "RelativeDocumentMoniker": "Assets\\CustomInspector\\Editor\\ItemDatabaseEditor.cs",
@@ -327,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Message_Actions.cs",
               "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Actions\\Message_Actions.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Actions\\Message_Actions.cs",
@@ -336,18 +351,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T08:05:44.61Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ThirdPersonCam.cs",
-              "DocumentMoniker": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Player\\ThirdPersonCam.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\ThirdPersonCam.cs",
-              "ToolTip": "D:\\Personal\\Unity Projects\\DetectiveBoyPrototype\\Detective_Boy_Prototype\\Assets\\Scripts\\Player\\ThirdPersonCam.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\ThirdPersonCam.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBUAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T07:50:51.908Z"
             }
           ]
         },
@@ -365,7 +368,8 @@
               "RelativeToolTip": "Assets\\Scripts\\Managers\\DataManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T23:00:23.397Z"
+              "WhenOpened": "2024-10-16T23:00:23.397Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -389,8 +393,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Actions\\Item_Actions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T07:58:07.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T07:58:07.268Z"
             },
             {
               "$type": "Document",
