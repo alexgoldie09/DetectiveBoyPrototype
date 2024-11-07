@@ -32,6 +32,7 @@ public class Item_Actions : Actions
         // Check if give item is true, then give the item
         if (canGiveItem)
         {
+            Debug.Log("I am giving item");
             // Check if own the item
             if (itemAmountOwned > 0)
             {
@@ -41,7 +42,6 @@ public class Item_Actions : Actions
                     // Pass the item, and invoke actions
                     DataManager.instance.Inventory.ModifyItemAmount(currentItem, amount, true);
                     Extensions.RunActions(giveActions);
-
                 }
                 else if(!currentItem.AllowMultiple && itemAmountOwned == 1)
                 {
@@ -49,36 +49,64 @@ public class Item_Actions : Actions
                     DataManager.instance.Inventory.ModifyItemAmount(currentItem, itemAmountOwned, true);
                     Extensions.RunActions(giveActions);
                 }
-                else
-                {
-                    // Do not have the item
-                    Extensions.RunActions(doNotGiveActions);
-                }
+            }
+            else
+            {
+                Debug.Log("You do not have the item.");
+                // Do not have the item
+                Extensions.RunActions(doNotGiveActions);
             }
         }
         // else receive item
         else
         {
-            // Check if the item can be multiples
-            if(currentItem.AllowMultiple)
+            Interactable npc = GetComponent<Interactable>();
+            Clue clue = GetComponent<Clue>();
+            if (npc != null && !npc.IsSuspect)
             {
-                DataManager.instance.Inventory.ModifyItemAmount(currentItem,amount);
-                Extensions.RunActions(receiveActions);
-            }
-            // Else if we dont allow any multiples
-            else if(!currentItem.AllowMultiple)
-            {
-                if(itemAmountOwned == 1)
+                if (currentItem.IsReward && GameManager.instance.CanGiveReward(currentItem.QuestId))
+                {
+                    ReceiveItem(itemAmountOwned);
+                }
+                else
                 {
                     // Already have, invoke actions
                     Extensions.RunActions(doNotReceiveActions);
                 }
-                else
-                {
-                    // Add the item and invoke actions
-                    DataManager.instance.Inventory.ModifyItemAmount(currentItem, 1);
-                    Extensions.RunActions(receiveActions);
-                }
+            }
+            else if (clue != null)
+            {
+                ReceiveItem(itemAmountOwned);
+            }
+            else
+            {
+                // Already have, invoke actions
+                Extensions.RunActions(doNotReceiveActions);
+            }
+        }
+    }
+
+    private void ReceiveItem(int _itemAmountOwned)
+    {
+        // Check if the item can be multiples
+        if (currentItem.AllowMultiple)
+        {
+            DataManager.instance.Inventory.ModifyItemAmount(currentItem, amount);
+            Extensions.RunActions(receiveActions);
+        }
+        // Else if we dont allow any multiples
+        else if (!currentItem.AllowMultiple)
+        {
+            if (_itemAmountOwned == 1)
+            {
+                // Already have, invoke actions
+                Extensions.RunActions(doNotReceiveActions);
+            }
+            else
+            {
+                // Add the item and invoke actions
+                DataManager.instance.Inventory.ModifyItemAmount(currentItem, 1);
+                Extensions.RunActions(receiveActions);
             }
         }
     }

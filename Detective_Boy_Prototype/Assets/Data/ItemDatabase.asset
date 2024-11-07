@@ -18,20 +18,44 @@ MonoBehaviour:
     itemDescription: Big chicken meat
     itemSprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 1
+    isReward: 0
+    questId: 0
     amount: 0
   - itemId: 1
     itemName: Key
     itemDescription: I unlock doors
     itemSprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 0
+    isReward: 0
+    questId: 0
     amount: 0
   - itemId: 2
-    itemName: Pizza
-    itemDescription: Pizza yuuum
+    itemName: Bread
+    itemDescription: Bread from Winters
     itemSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     allowMultiple: 0
+    isReward: 1
+    questId: 120
+    amount: 0
+  - itemId: 3
+    itemName: Clue
+    itemDescription: Flour Dust
+    itemSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+    allowMultiple: 0
+    isReward: 0
+    questId: 0
+    amount: 0
+  - itemId: 4
+    itemName: ClueTwo
+    itemDescription: Combination 79
+    itemSprite: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+    allowMultiple: 0
+    isReward: 0
+    questId: 0
     amount: 0
   itemNames:
   - Chicken
   - Key
-  - Pizza
+  - Bread
+  - Clue
+  - ClueTwo

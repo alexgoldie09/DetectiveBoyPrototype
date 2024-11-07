@@ -3,20 +3,24 @@ using UnityEngine;
 [System.Serializable]
 public class Item
 {
-    [SerializeField] private int itemId; // Reference to the item's id number
-    [SerializeField] private string itemName; // Reference to the item's name
-    [SerializeField] private string itemDescription; // Reference to the item's description
-    [SerializeField] private Sprite itemSprite; // Reference to the item's sprite
-    [SerializeField] private bool allowMultiple; // Reference to whether we can have multiple items
-    [SerializeField] private int amount; // Reference to how many of these items we can have
+    [SerializeField] protected int itemId; // Reference to the item's id number
+    [SerializeField] protected string itemName; // Reference to the item's name
+    [SerializeField] protected string itemDescription; // Reference to the item's description
+    [SerializeField] protected Sprite itemSprite; // Reference to the item's sprite
+    [SerializeField] protected bool allowMultiple; // Reference to whether we can have multiple items
+    [SerializeField] protected bool isReward; // Reference to whether the item is a reward
+    [SerializeField] protected int questId; // Reference to the items quest ID
+    [SerializeField] protected int amount; // Reference to how many of these items we can have
 
-    public Item(int _itemId, string _itemName, string _itemDescription, Sprite _itemSprite, bool _allowMultiple)
+    public Item(int _itemId, string _itemName, string _itemDescription, Sprite _itemSprite, bool _allowMultiple, bool _isReward, int _questId)
     {
         this.itemId = _itemId;
         this.itemName = _itemName;
         this.itemDescription = _itemDescription;
         this.itemSprite = _itemSprite;
         this.allowMultiple = _allowMultiple;
+        this.isReward = _isReward;
+        this.questId = _questId;
     }
 
     public void ModifyAmount(int _value) => amount += _value;
@@ -27,6 +31,8 @@ public class Item
     public string ItemDescription { get { return itemDescription; } set { itemDescription = value; } }
     public Sprite ItemSprite { get { return itemSprite; } set { itemSprite = value; } }
     public bool AllowMultiple { get { return allowMultiple; } set { allowMultiple = value; } }
+    public bool IsReward { get { return isReward; } set { isReward = value; } }
+    public int QuestId { get { return questId; } set { questId = value; } }
     public int Amount { get { return amount; } set { amount = value; } }
     #endregion
 }

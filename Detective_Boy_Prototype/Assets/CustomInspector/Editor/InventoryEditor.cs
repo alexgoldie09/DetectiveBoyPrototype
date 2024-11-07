@@ -70,6 +70,11 @@ public class InventoryEditor : Editor
         var spriteViewer = AssetPreview.GetAssetPreview(_item.FindPropertyRelative("itemSprite").objectReferenceValue);
         GUILayout.Label(spriteViewer);
 
+        if (_item.FindPropertyRelative("isReward").boolValue)
+        {
+            EditorGUILayout.LabelField("Quest ID: " + _item.FindPropertyRelative("questId").intValue, GUILayout.Width(75f));
+        }
+
         if (_item.FindPropertyRelative("allowMultiple").boolValue)
         {
             EditorGUILayout.PropertyField(_item.FindPropertyRelative("amount"));

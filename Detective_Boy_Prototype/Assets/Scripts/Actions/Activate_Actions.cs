@@ -8,9 +8,20 @@ public class Activate_Actions : Actions
 
     public override void Act()
     {
-        for(int i = 0; i < customGameObjects.Count; i++)
+        StartCoroutine(ActivateGameobject());
+    }
+
+    private IEnumerator ActivateGameobject()
+    {
+        for (int i = 0; i < customGameObjects.Count; i++)
         {
+            yield return new WaitForSeconds(customGameObjects[i].ActivateTime);
             customGameObjects[i].CustomGO.SetActive(customGameObjects[i].ActiveStatus);
+            //NPCController npc = GetComponent<NPCController>();
+            //if (npc != null && npc.IsSuspect)
+            //{
+            //    DataManager.instance.SuspectRemoved(npc.NPCId);
+            //}
         }
     }
 }
@@ -20,9 +31,10 @@ public class CustomGameObject
 {
     [SerializeField] private GameObject customGO; // Reference to the game object
     [SerializeField] private bool activeStatus; // Reference to whether the object is active
-
+    [SerializeField] private float activateTime; // Reference to if there is a delay before activation/deactivation
     #region Getters and Setters
     public GameObject CustomGO => customGO;
     public bool ActiveStatus => activeStatus;
+    public float ActivateTime => activateTime;
     #endregion
 }

@@ -1,29 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.ProBuilder.MeshOperations;
 
 public class PlayerController : MonoBehaviour
 {
-    public static PlayerController instance { get; private set; }
-
-    private void Awake()
-    {
-        // If an instance already exists and it's not this one, destroy the new one
-        if (instance != null && instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            // Assign this as the instance
-            instance = this;
-
-            // Optionally, ensure this object persists across scenes
-            DontDestroyOnLoad(gameObject);
-        }
-    }
-
     [Header("References")]
     [SerializeField] private Transform orientation; // Reference to which way the player is orientated
     [SerializeField] private Rigidbody rb; // Reference to player's rigidbody
@@ -47,8 +27,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundMask; // Assign a ground layer mask
     [SerializeField] private float groundDrag; // Add drag resistance to movement
 
-    private bool isTalking = false; // Reference to if the player is talking or not
-
     // Start is called before the first frame update
     private void Start()
     {
@@ -59,7 +37,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         // Check if the player is in conversation
-        if (!isTalking)
+        if (!Extensions.isTalking && !Extensions.isExamining)
         {
             // Call move player function
             MovePlayer();
@@ -202,11 +180,4 @@ public class PlayerController : MonoBehaviour
 
     // Function for ground check
     private bool IsGrounded() => Physics.Raycast(groundCheck.position, Vector3.down, groundCheckDistance, groundMask);
-
-    // Functions to get or set variables
-    public bool IsTalking
-    {
-        get { return isTalking; }  // Getter
-        set { isTalking = value; } // Setter
-    }
 }

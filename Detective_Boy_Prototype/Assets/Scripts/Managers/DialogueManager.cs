@@ -46,6 +46,8 @@ public class DialogueManager : MonoBehaviour
     public void ShowMessages(List<string> _currentMessages,bool _enableDialog, List<Actions> _interrogateActions = null,
         List<Actions> _accuseActions = null, string _interrogateMessage = "Interrogate", string _accuseMessage = "Accuse")
     {
+        // Set player to note move
+        Extensions.isTalking = true;
         // Reset message ID to zero
         msgId = 0;
         // Remove buttons at beginning
@@ -124,11 +126,14 @@ public class DialogueManager : MonoBehaviour
         {
             // Set panel to inactive
             dialoguePanel.SetActive(false);
-            // Disable cursor
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            if (!Extensions.isExamining)
+            {
+                // Disable cursor
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
             // Allow player to move again
-            PlayerController.instance.IsTalking = false;
+            Extensions.isTalking = false;
         }
     }
 

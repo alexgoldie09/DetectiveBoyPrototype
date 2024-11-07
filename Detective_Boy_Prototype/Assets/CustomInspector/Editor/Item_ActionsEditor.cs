@@ -70,9 +70,20 @@ public class Item_ActionsEditor : Editor
         EditorGUILayout.LabelField("Item ID: " + _item.ItemId, GUILayout.Width(75f));
         EditorGUILayout.LabelField("Item Name: " + _item.ItemName);
 
+
         GUILayout.EndHorizontal();
 
+        GUILayout.BeginVertical();
+        
         EditorGUILayout.LabelField("Item Description: " + _item.ItemDescription, GUILayout.Height(70f));
+
+        if (_item.IsReward)
+        {
+            EditorGUILayout.LabelField("I am a reward!");
+            EditorGUILayout.LabelField("Quest ID: " + _item.QuestId, GUILayout.Width(75f));
+        }
+
+        GUILayout.EndVertical();
 
         GUILayout.BeginHorizontal();
 

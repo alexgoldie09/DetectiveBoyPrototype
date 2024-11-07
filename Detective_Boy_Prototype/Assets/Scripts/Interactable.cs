@@ -5,12 +5,21 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    [SerializeField] private Transform player; // Reference to the player's transform
+    [Header("Gameobject info")]
+    [SerializeField] private int id; // Reference to the interactable's Id
+    [SerializeField] private bool isNPC; // Reference to whether this is a NPC or object
+    [SerializeField] private bool isSuspect; // Reference to whether this object is a suspect
+
+    [Header("Interaction variables")]
     [SerializeField] private float interactionDistance = 2f; // Set the distance threshold
     [SerializeField] private GameObject displayUI; // Reference to the interactable text
     [SerializeField] private TextMeshProUGUI displayText; // Reference to the display text
     [SerializeField] private string defaultMessage = ""; // Reference to the message for text
-    [SerializeField] Actions[] actions; // Reference to interactable actions
+
+    [Header("References")]
+    [SerializeField] private Transform player; // Reference to the player's transform
+    [SerializeField] private Actions[] actions; // Reference to interactable actions
+    [SerializeField] private Camera mainCam; // Reference to main cam
 
     private void Start()
     {
@@ -20,6 +29,11 @@ public class Interactable : MonoBehaviour
         if(player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+
+        if(mainCam == null)
+        {
+            mainCam = Camera.main;
         }
     }
 
@@ -33,10 +47,11 @@ public class Interactable : MonoBehaviour
 
     private void Interact()
     {
+        displayUI.transform.rotation = Quaternion.LookRotation(transform.position - mainCam.transform.position);
+
         if (Input.GetKeyDown(KeyCode.E) && CheckDistanceToPlayer() < interactionDistance)
         {
             displayUI.SetActive(false);
-            PlayerController.instance.IsTalking = true;
             StartCoroutine(ExecuteActionList());
         }
     }
@@ -44,7 +59,6 @@ public class Interactable : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            Debug.Log("Player has entered.");
             displayUI.SetActive(true);
             displayText.text = defaultMessage;
         }
@@ -54,7 +68,6 @@ public class Interactable : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player has left.");
             displayUI.SetActive(false);
         }
     }
@@ -70,9 +83,18 @@ public class Interactable : MonoBehaviour
     private IEnumerator RunAction(int index)
     {
         yield return null;
-        actions[index].Act();
+        if (actions[index] != null)
+        {
+            actions[index].Act();
+        }
     }
 
     // Function to check distance between interactable and player
     private float CheckDistanceToPlayer() => Vector3.Distance(transform.position, player.position);
+
+    #region Getters and Setters
+    public int Id { get { return id; } set { id = value; } }
+    public bool IsNPC { get { return isNPC; } set { isNPC = value; } }
+    public bool IsSuspect { get { return isSuspect; } set { isSuspect = value; } }
+    #endregion
 }

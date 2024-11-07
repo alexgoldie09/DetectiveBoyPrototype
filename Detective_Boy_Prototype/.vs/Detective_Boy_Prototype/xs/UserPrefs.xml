@@ -1,38 +1,25 @@
 ﻿<Properties StartupConfiguration="{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Managers/DialogueManager.cs">
-    <Files>
-      <File FileName="Assets/Scripts/Actions/Activate_Actions.cs" Line="13" Column="88" />
-      <File FileName="Assets/CustomInspector/Editor/Message_ActionsEditor.cs" Line="33" Column="9" />
-      <File FileName="Assets/Scripts/Managers/DialogueManager.cs" Line="111" Column="63" />
-      <File FileName="Assets/CustomInspector/Editor/Activate_ActionsEditor.cs" Line="45" Column="56" NotebookId="1" />
-      <File FileName="Assets/Scripts/Interactable.cs" Line="1" Column="1" NotebookId="1" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Detective_Boy_Prototype" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="CustomInspector" expanded="True">
-                <Node name="Editor" expanded="True" />
-              </Node>
-              <Node name="Scripts" expanded="True">
-                <Node name="Actions" expanded="True" />
-                <Node name="Base Class" expanded="True" />
-                <Node name="Extensions" expanded="True">
-                  <Node name="Editor" expanded="True" />
-                </Node>
-                <Node name="Managers" expanded="True" />
-                <Node name="NPC" expanded="True" />
-                <Node name="Scriptable Object" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="22b31450-2ad3-4b22-8373-67b141dd78f4" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="df660ecb-2b3a-429e-ba9a-d6df892c6690" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Managers/GameManager.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Actions/Examine_Actions.cs" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="3" Column="7" />
+      <File FileName="Assets/Scripts/Actions/Puzzle_Actions.cs" Line="55" Column="33" />
+      <File FileName="Assets/Scripts/Managers/DataManager.cs" Line="9" Column="5" />
+      <File FileName="Assets/Scripts/Actions/EndGame_Actions.cs" Line="9" Column="41" />
+      <File FileName="Assets/Scripts/Actions/ChangeScene_Actions.cs" NotebookId="1" />
+      <File FileName="Assets/CustomInspector/Editor/ItemDatabaseEditor.cs" NotebookId="1" />
+      <File FileName="Assets/Scripts/Actions/Quest_Actions.cs" NotebookId="1" />
+      <File FileName="Assets/Scripts/Base Class/ClueHover.cs" Line="78" Column="49" NotebookId="1" />
+      <File FileName="Assets/Scripts/Base Class/KeypadUIController.cs" Line="74" Column="48" NotebookId="1" />
+      <File FileName="Assets/Scripts/Managers/PuzzleManager.cs" Line="37" Column="10" NotebookId="1" />
+      <File FileName="Assets/Scripts/Player/PlayerController.cs" NotebookId="1" />
+      <File FileName="Assets/Scripts/Managers/AudioManager.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Actions/Audio_Actions.cs" Line="18" Column="10" NotebookId="1" />
+      <File FileName="Assets/Scripts/Base Class/Clue.cs" Line="15" Column="30" NotebookId="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
