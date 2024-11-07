@@ -385,6 +385,7 @@
 "Assets/Scripts/Base Class/Actions.cs"
 "Assets/Scripts/Base Class/Clue.cs"
 "Assets/Scripts/Base Class/ClueHover.cs"
+"Assets/Scripts/Base Class/InventoryUI.cs"
 "Assets/Scripts/Base Class/Item.cs"
 "Assets/Scripts/Base Class/KeypadUIController.cs"
 "Assets/Scripts/Base Class/Quest.cs"

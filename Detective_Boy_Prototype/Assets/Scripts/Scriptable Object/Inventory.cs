@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,10 +7,12 @@ public class Inventory : ScriptableObject
 {
     [SerializeField] private ItemDatabase itemDatabase; // Reference to the item database
     [SerializeField] List<Item> inventoryList = new List<Item>(); // Reference to the inventory
+    public Action OnInventoryChanged; // Event triggered on inventory change
 
     public void AddItem(Item _item)
     {
         inventoryList.Add(_item);
+        OnInventoryChanged?.Invoke(); // Trigger update
     }
 
     public void ModifyItemAmount(Item _item, int _amount = 1, bool _giveItem = false)
@@ -26,11 +28,17 @@ public class Inventory : ScriptableObject
                     if (inventoryList[i].Amount <= 0 && _giveItem)
                     {
                         inventoryList.RemoveAt(i);
+                        OnInventoryChanged?.Invoke(); // Trigger update after item removal
+                    }
+                    else
+                    {
+                        OnInventoryChanged?.Invoke(); // Trigger update after modifying item amount
                     }
                 }
                 else
                 {
                     inventoryList.RemoveAt(i);
+                    OnInventoryChanged?.Invoke(); // Trigger update after removing non-stackable item
                 }
 
                 return;
@@ -41,6 +49,7 @@ public class Inventory : ScriptableObject
         newItem.ModifyAmount(_amount);
 
         AddItem(newItem);
+        OnInventoryChanged?.Invoke(); // Trigger update after adding new item
     }
 
     public int CheckAmount(Item _item)
@@ -65,5 +74,6 @@ public class Inventory : ScriptableObject
 
     #region Getter and Setter
     public ItemDatabase ItemDatabase { get { return itemDatabase; } set { itemDatabase = value; } }
+    public List<Item> InventoryList => inventoryList;
     #endregion
 }

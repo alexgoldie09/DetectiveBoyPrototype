@@ -78,6 +78,7 @@
     <Compile Include="Assets/Scripts/Data/ClueData.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
     <Compile Include="Assets/Scripts/Actions/ChangeScene_Actions.cs" />
+    <Compile Include="Assets/Scripts/Base Class/InventoryUI.cs" />
     <Compile Include="Assets/Scripts/Base Class/ClueHover.cs" />
     <Compile Include="Assets/Scripts/Actions/Audio_Actions.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
