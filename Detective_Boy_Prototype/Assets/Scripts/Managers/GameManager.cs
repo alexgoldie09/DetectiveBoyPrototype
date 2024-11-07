@@ -136,6 +136,11 @@ public class GameManager : MonoBehaviour
                 player.transform.rotation = Quaternion.LookRotation(spawnEntries[i].SpawnDir);
             }
         }
+
+        if(Time.timeScale == 0)
+        {
+            Time.timeScale = 1f;
+        }
     }
     #endregion
 

@@ -12,6 +12,7 @@ public class ChangeScene_Actions : Actions
         DataManager.instance.SetPrevSceneName(SceneManager.GetActiveScene().name);
         GameManager.instance.SaveAllInteractableStates();
         GameManager.instance.SaveAllClueStates();
+        Time.timeScale = 0f;
         DataManager.instance.LevelManager.SceneLoad(sceneTarget);   
     }
 }
