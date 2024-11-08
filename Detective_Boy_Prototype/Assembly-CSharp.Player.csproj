@@ -135,6 +135,7 @@
     <Compile Include="Assets/Supercyan Character Pack Free Sample/Scripts/SimpleSampleCharacterControl.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
     <Compile Include="Assets/Scripts/Actions/Message_Actions.cs" />
+    <Compile Include="Assets/Scripts/Base Class/UIVolumeSlider.cs" />
     <Compile Include="Assets/Scripts/Actions/Examine_Actions.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
   </ItemGroup>

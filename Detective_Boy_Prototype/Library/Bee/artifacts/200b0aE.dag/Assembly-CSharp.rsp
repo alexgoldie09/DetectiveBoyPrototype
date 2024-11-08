@@ -391,6 +391,7 @@
 "Assets/Scripts/Base Class/PauseMenu.cs"
 "Assets/Scripts/Base Class/Quest.cs"
 "Assets/Scripts/Base Class/QuestStep.cs"
+"Assets/Scripts/Base Class/UIVolumeSlider.cs"
 "Assets/Scripts/Data/ClueData.cs"
 "Assets/Scripts/Data/IGameObjectData.cs"
 "Assets/Scripts/Data/InteractableData.cs"

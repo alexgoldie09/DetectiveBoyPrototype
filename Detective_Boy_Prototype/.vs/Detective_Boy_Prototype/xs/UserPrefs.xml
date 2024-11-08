@@ -5,42 +5,24 @@
       <File FileName="Assets/Scripts/Actions/Item_Actions.cs" />
       <File FileName="Assets/Scripts/Scriptable Object/ItemDatabase.cs" />
       <File FileName="Assets/Scripts/Actions/CheckInventory_Actions.cs" />
-      <File FileName="Assets/Scripts/Managers/DataManager.cs" Line="85" Column="6" />
-      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Base Class/InventoryUI.cs" Line="27" Column="30" />
+      <File FileName="Assets/Scripts/Managers/DataManager.cs" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" />
+      <File FileName="Assets/Scripts/Base Class/InventoryUI.cs" />
       <File FileName="Assets/Scripts/Scriptable Object/Inventory.cs" />
       <File FileName="Assets/CustomInspector/Editor/InventoryEditor.cs" />
       <File FileName="Assets/Scripts/Base Class/Item.cs" />
-      <File FileName="Assets/Scripts/Base Class/PauseMenu.cs" Line="145" Column="60" />
-      <File FileName="Assets/Scripts/Base Class/Quest.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Base Class/QuestStep.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Actions/Examine_Actions.cs" Line="56" Column="9" />
+      <File FileName="Assets/Scripts/Base Class/PauseMenu.cs" Line="199" Column="47" />
+      <File FileName="Assets/Scripts/Base Class/Quest.cs" />
+      <File FileName="Assets/Scripts/Base Class/QuestStep.cs" />
+      <File FileName="Assets/Scripts/Actions/Examine_Actions.cs" />
+      <File FileName="Assets/Scripts/Base Class/UIVolumeSlider.cs" Line="38" Column="6" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Detective_Boy_Prototype" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="CustomInspector" expanded="True">
-                <Node name="Editor" expanded="True" />
-              </Node>
-              <Node name="Scripts" expanded="True">
-                <Node name="Actions" expanded="True" />
-                <Node name="Base Class" expanded="True" />
-                <Node name="Managers" expanded="True" />
-                <Node name="Scriptable Object" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f1f24bc4-9538-42de-a0a7-3af2b34f8bc9" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="82684370-8747-4c26-a873-20a0a4bec11b" />
+  <MultiItemStartupConfigurations />
 </Properties>
