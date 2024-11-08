@@ -61,6 +61,29 @@ public class DataManager : MonoBehaviour
         }
     }
 
+    // Returns a list of all current quest steps that are not yet complete
+    public List<QuestStep> GetAllCurrentQuestSteps()
+    {
+        List<QuestStep> activeSteps = new List<QuestStep>();
+
+        foreach (var quest in quests.Values)
+        {
+            if (!quest.IsComplete)
+            {
+                foreach (var step in quest.Steps)
+                {
+                    if (!step.IsComplete)
+                    {
+                        activeSteps.Add(step);
+                        break; // Only add the first incomplete step of this quest
+                    }
+                }
+            }
+        }
+
+        return activeSteps; // Returns a list of all active quest steps
+    }
+
     #endregion
 
     #region Gameobject data
