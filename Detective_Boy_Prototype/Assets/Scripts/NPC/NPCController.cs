@@ -16,6 +16,7 @@ public class NPCController : MonoBehaviour
     [SerializeField] private float interactionDistance = 5f; // Distance within which the NPC stops and looks at the player
     [SerializeField] private float waitTime = 2f; // Time to wait at each point
 
+    private Quaternion originalRotation; // Store the original rotation of the NPC
     private int lastPatrolPointIndex = -1; // Store last patrol point index
     private bool isWaiting = false; // Reference to if the NPC is waiting
     private bool playerInRange = false; // Reference to if the player is in range
@@ -27,6 +28,9 @@ public class NPCController : MonoBehaviour
         anim = GetComponent<Animator>();
 
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
+
+        // Store the NPC's original rotation
+        originalRotation = transform.rotation;
 
         if (patrolPoints.Length > 0)
         {
@@ -52,7 +56,15 @@ public class NPCController : MonoBehaviour
         }
         else if (!isWaiting && !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
-            StartCoroutine(WaitAtPoint()); // Wait at the current point
+            if (patrolPoints.Length > 0)
+            {
+                StartCoroutine(WaitAtPoint()); // Wait at the current point if patrolling
+            }
+            else
+            {
+                // For stationary NPCs, ensure they maintain idle behavior
+                anim.SetBool("isWalking", false);
+            }
         }
 
         UpdateAnimation();
@@ -93,6 +105,25 @@ public class NPCController : MonoBehaviour
             MoveToRandomPatrolPoint(); // Move to a new random patrol point
             anim.SetBool("isWalking", true); // Switch to walk animation
         }
+        else
+        {
+            // For stationary NPCs, reset to original rotation
+            agent.isStopped = true; // Ensure the NPC remains stationary
+            anim.SetBool("isWalking", false); // Switch to idle animation
+            // Reset NPC's rotation to its original value (both stationary and patrolling NPCs)
+            StartCoroutine(ResetRotation());
+        }
+    }
+
+    private IEnumerator ResetRotation()
+    {
+        // Gradually reset the NPC's rotation to the original
+        while (Quaternion.Angle(transform.rotation, originalRotation) > 0.1f)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, originalRotation, Time.deltaTime * 5f);
+            yield return null; // Wait for the next frame
+        }
+        transform.rotation = originalRotation; // Ensure precise final alignment
     }
 
     // Function to wait at point once NPC reaches

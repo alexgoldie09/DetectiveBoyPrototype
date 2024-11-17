@@ -79,6 +79,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
     <Compile Include="Assets/Scripts/Actions/ChangeScene_Actions.cs" />
     <Compile Include="Assets/Scripts/Base Class/InventoryUI.cs" />
+    <Compile Include="Assets/Scripts/Base Class/MainCanvas.cs" />
     <Compile Include="Assets/Scripts/Base Class/ClueHover.cs" />
     <Compile Include="Assets/Scripts/Actions/Audio_Actions.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
     <Compile Include="Assets/Scripts/Base Class/PauseMenu.cs" />
     <Compile Include="Assets/Scripts/Base Class/Quest.cs" />
+    <Compile Include="Assets/Scripts/Base Class/LimitMinimapCam.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
     <Compile Include="Assets/Scripts/Extensions/Extensions.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />

@@ -54,6 +54,7 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         isPaused = true;
+        Extensions.isPaused = true;
         pauseMenuUI.SetActive(true);
         ShowInventory(); // Default to Inventory panel
         Time.timeScale = 0f; // Freeze game time
@@ -66,6 +67,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         isPaused = false;
+        Extensions.isPaused = false;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f; // Resume game time
 

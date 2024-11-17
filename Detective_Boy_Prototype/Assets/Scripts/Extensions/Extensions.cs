@@ -7,6 +7,7 @@ public static class Extensions
 {
     public static bool isExamining = false;
     public static bool isTalking = false;
+    public static bool isPaused = false;
 
     public static Item CopyItem(Item _item)
     {

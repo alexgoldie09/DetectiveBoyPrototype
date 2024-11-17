@@ -388,6 +388,8 @@
 "Assets/Scripts/Base Class/InventoryUI.cs"
 "Assets/Scripts/Base Class/Item.cs"
 "Assets/Scripts/Base Class/KeypadUIController.cs"
+"Assets/Scripts/Base Class/LimitMinimapCam.cs"
+"Assets/Scripts/Base Class/MainCanvas.cs"
 "Assets/Scripts/Base Class/PauseMenu.cs"
 "Assets/Scripts/Base Class/Quest.cs"
 "Assets/Scripts/Base Class/QuestStep.cs"
