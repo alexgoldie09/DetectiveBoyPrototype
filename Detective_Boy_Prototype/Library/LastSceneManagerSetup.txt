@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/FinalTestMarketplace.unity
+- path: Assets/Scenes/FinalTestVillage.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

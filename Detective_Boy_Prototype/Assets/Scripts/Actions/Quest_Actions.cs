@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class Quest_Actions : Actions
 {
@@ -16,34 +18,58 @@ public class Quest_Actions : Actions
     {
         if (questCanvas != null)
         {
-            if(receiveQuest)
+            // Check if the quest exists and is incomplete
+            if (DataManager.instance.quests.ContainsKey(questId))
             {
-                questCanvas.SetActive(true);
+                // If the quest is complete, hide the icon
+                if (DataManager.instance.quests[questId].IsComplete)
+                {
+                    questCanvas.SetActive(false);
+                }
+                else
+                {
+                    questCanvas.SetActive(receiveQuest);
+                }
             }
             else
             {
-                questCanvas.SetActive(false);
+                // Quest does not exist, show the icon if set to receiveQuest
+                questCanvas.SetActive(receiveQuest);
             }
         }
-
     }
 
     public override void Act()
     {
-        // Check if you are receiving a quest
+        // Check if the player is supposed to receive a quest
         if (receiveQuest)
         {
+            // Prevent adding the quest if it's already complete
+            if (DataManager.instance.quests.ContainsKey(questId))
+            {
+                if (DataManager.instance.quests[questId].IsComplete)
+                {
+                    Debug.Log($"Quest #{questId} is already complete. Cannot receive it again.");
+                    return; // Exit the function early
+                }
+            }
+
+            // Add the quest if it doesn't already exist or is incomplete
             AddQuest();
             AddStepsToQuest();
-            if(questCanvas != null)
+
+            // Remove the quest icon if it exists
+            if (questCanvas != null)
             {
                 Destroy(questCanvas);
             }
         }
-        // Else you are completing a step
         else
         {
+            // Completing a quest step
             CompleteStep();
+            Debug.Log($"Quest {questId} is complete: {DataManager.instance.quests[questId].IsComplete}");
+
         }
     }
 
@@ -60,15 +86,17 @@ public class Quest_Actions : Actions
     {
         if (DataManager.instance.quests.ContainsKey(questId))
         {
+            var quest = DataManager.instance.quests[questId];
+
             foreach (QuestStep step in questSteps)
             {
                 // Check if the step already exists
-                bool stepExists = DataManager.instance.quests[questId].Steps.Exists(s => s.stepId == step.stepId);
+                bool stepExists = quest.Steps.Exists(s => s.stepId == step.stepId);
 
                 if (!stepExists)
                 {
                     // Step does not exist, so add it
-                    DataManager.instance.quests[questId].Steps.Add(new QuestStep(step.stepId, step.description));
+                    quest.Steps.Add(new QuestStep(step.stepId, step.description));
                     Debug.Log($"Added quest step #{step.stepId}: {step.description}");
                 }
                 else
@@ -77,6 +105,10 @@ public class Quest_Actions : Actions
                 }
         
             }
+
+            // Update IsComplete status in case all steps are already complete
+            quest.IsComplete = quest.Steps.All(s => s.IsComplete);
+            Debug.Log($"Quest {questId} IsComplete updated: {quest.IsComplete}");
         }
     }
 
@@ -84,15 +116,22 @@ public class Quest_Actions : Actions
     {
         if (DataManager.instance.quests.ContainsKey(questId))
         {
+            var quest = DataManager.instance.quests[questId];
             var step = DataManager.instance.quests[questId].Steps.Find(s => s.stepId == stepId);
             if (step != null && !step.IsComplete)
             {
                 step.IsComplete = true;
                 Debug.Log($"Step {step.stepId} has been completed.");
+                // Check if all steps are complete and update the IsComplete property
+                if (quest.Steps.All(s => s.IsComplete))
+                {
+                    quest.IsComplete = true;
+                    Debug.Log($"Quest {questId} is now complete!");
+                }
             }
             else
             {
-                Debug.Log("Step is finished.");
+                Debug.Log("Step is finished or does not exist.");
             }
         }
     }
