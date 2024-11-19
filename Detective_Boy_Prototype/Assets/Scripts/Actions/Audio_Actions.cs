@@ -12,11 +12,17 @@ public class Audio_Actions : Actions
     {
         if(!isMusic)
         {
-            AudioManager.instance.PlaySfx(audioClips[Random.Range(0, audioClips.Length)], transform, minPitch, maxPitch);
+            if (audioClips != null && audioClips.Length > 0)
+            {
+                AudioManager.instance.PlaySfx(audioClips[Random.Range(0, audioClips.Length)], transform, minPitch, maxPitch);
+            }
         }
         else
         {
-            AudioManager.instance.PlayMusic(audioClips[0]);
+            if (audioClips != null && audioClips.Length > 0)
+            {
+                AudioManager.instance.PlayMusic(audioClips[0]);
+            }
         }
     }
 }
