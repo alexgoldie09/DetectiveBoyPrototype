@@ -13,6 +13,7 @@ public class Examine_Actions : Actions
     [SerializeField] private LayerMask firstPersonCullingMask; // Set this in the inspector
     [Header("Examine variables")]
     [SerializeField] private Transform itemHolder; // Empty GameObject in front of the camera for item positioning
+    [SerializeField] private Vector3 manualItemPosition = Vector3.zero; // Editable position via inspector
     [SerializeField] private float rotSpeed = 100f;  // Speed of rotation
 
     private bool isDragging = false;   // To track if the player is currently dragging the item
@@ -43,7 +44,18 @@ public class Examine_Actions : Actions
     {
         // Move the item to the itemHolder's position, relative to the first-person camera
         transform.SetParent(itemHolder);
-        transform.localPosition = Vector3.zero;  // Ensure it's centered at itemHolder
+
+        // Use the manual position if specified, otherwise default to (0, 0, 0)
+        if (manualItemPosition != Vector3.zero)
+        {
+            transform.localPosition = manualItemPosition;
+        }
+        else
+        {
+            transform.localPosition = Vector3.zero;  // Default fallback
+        }
+
+        // Keep rotation unchanged
         transform.localRotation = Quaternion.identity;  // Reset rotation
 
         // Optionally disable the item's Rigidbody during examination

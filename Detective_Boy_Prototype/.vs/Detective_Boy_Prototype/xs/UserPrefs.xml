@@ -1,12 +1,5 @@
 ﻿<Properties StartupConfiguration="{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ec36594b-8a1d-428e-960b-2639139a071c" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC/NPCController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Actions/Examine_Actions.cs">
     <Files>
       <File FileName="Assets/Scripts/Actions/EndGame_Actions.cs" />
       <File FileName="Assets/Scripts/Actions/Item_Actions.cs" />
@@ -18,30 +11,22 @@
       <File FileName="Assets/Scripts/Scriptable Object/Inventory.cs" />
       <File FileName="Assets/CustomInspector/Editor/InventoryEditor.cs" />
       <File FileName="Assets/Scripts/Base Class/Item.cs" />
-      <File FileName="Assets/Scripts/Base Class/PauseMenu.cs" Line="31" Column="5" />
+      <File FileName="Assets/Scripts/Base Class/PauseMenu.cs" />
       <File FileName="Assets/Scripts/Base Class/Quest.cs" />
       <File FileName="Assets/Scripts/Base Class/QuestStep.cs" />
-      <File FileName="Assets/Scripts/Actions/Examine_Actions.cs" />
+      <File FileName="Assets/Scripts/Actions/Examine_Actions.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Base Class/UIVolumeSlider.cs" />
-      <File FileName="Assets/Scripts/Extensions/Extensions.cs" Line="10" Column="41" />
-      <File FileName="Assets/Scripts/Base Class/MainCanvas.cs" Line="20" Column="10" />
-      <File FileName="Assets/Scripts/Base Class/LimitMinimapCam.cs" Line="11" Column="74" />
-      <File FileName="Assets/Scripts/NPC/NPCController.cs" Line="127" Column="6" />
+      <File FileName="Assets/Scripts/Extensions/Extensions.cs" />
+      <File FileName="Assets/Scripts/Base Class/MainCanvas.cs" />
+      <File FileName="Assets/Scripts/Base Class/LimitMinimapCam.cs" />
+      <File FileName="Assets/Scripts/NPC/NPCController.cs" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Detective_Boy_Prototype" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="Base Class" expanded="True" />
-                <Node name="Extensions" expanded="True" />
-                <Node name="NPC" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9c06d60c-74e0-4e7a-946b-ef97ed09fd2e" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
 </Properties>
