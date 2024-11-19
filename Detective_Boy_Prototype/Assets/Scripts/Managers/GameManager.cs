@@ -132,14 +132,39 @@ public class GameManager : MonoBehaviour
         {
             if (DataManager.instance.PrevSceneName == spawnEntries[i].PrevSceneName)
             {
+                // Set player position and rotation
                 player.transform.position = spawnEntries[i].SpawnPos;
-                player.transform.rotation = Quaternion.LookRotation(spawnEntries[i].SpawnDir);
+                if (spawnEntries[i].SpawnDir != Vector3.zero)
+                {
+                    player.transform.rotation = Quaternion.LookRotation(spawnEntries[i].SpawnDir);
+                }
+
+                // Update Cinemachine Heading Bias
+                UpdateCinemachineHeading(spawnEntries[i].SpawnDir);
             }
         }
 
         if(Time.timeScale == 0)
         {
             Time.timeScale = 1f;
+        }
+    }
+
+    private void UpdateCinemachineHeading(Vector3 spawnDirection)
+    {
+        Cinemachine.CinemachineFreeLook freeLookCamera = FindObjectOfType<Cinemachine.CinemachineFreeLook>();
+
+        if (freeLookCamera != null)
+        {
+            // Convert spawnDirection to a heading angle
+            float headingAngle = Mathf.Atan2(spawnDirection.x, spawnDirection.z) * Mathf.Rad2Deg;
+
+            // Update the Cinemachine camera's heading bias
+            freeLookCamera.m_Heading.m_Bias = headingAngle;
+        }
+        else
+        {
+            Debug.LogWarning("Cinemachine FreeLook camera not found!");
         }
     }
     #endregion
@@ -175,9 +200,15 @@ public class GameManager : MonoBehaviour
             var interactable = FindInteractableById(_id); // Implement this method to find the NPC in the scene
             if (interactable != null)
             {
-                interactable.transform.position = interactableData.position;
+                Debug.Log($"Loading interactable ID: {_id}, Saved Position: {interactableData.position}, Current Position: {interactable.transform.position}");
+
+                // Only restore position if it significantly differs
+                if (Vector3.Distance(interactable.transform.position, interactableData.position) > 0.01f)
+                {
+                    interactable.transform.position = interactableData.position;
+                }
+
                 interactable.gameObject.SetActive(interactableData.isActive);
-                Debug.Log($"Loaded interactable with ID: {interactableData.id}.");
             }
         }
     }

@@ -364,8 +364,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: 1551eac16d8f746618e811ded03f4b99, type: 3}
-  minPitch: 0.9
-  maxPitch: 0.9
+  minPitch: 0.95
+  maxPitch: 0.95
   isMusic: 0
 --- !u!4 &120575814 stripped
 Transform:
@@ -563,15 +563,15 @@ MonoBehaviour:
   m_TransparentLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_MinimumDistanceFromTarget: 0.1
+  m_MinimumDistanceFromTarget: 6
   m_AvoidObstacles: 1
-  m_DistanceLimit: 0
+  m_DistanceLimit: 2.2
   m_MinimumOcclusionTime: 0
   m_CameraRadius: 0.1
   m_Strategy: 0
   m_MaximumEffort: 4
-  m_SmoothingTime: 0.1
-  m_Damping: 0.6
+  m_SmoothingTime: 0.9
+  m_Damping: 1
   m_DampingWhenOccluded: 0
   m_OptimalTargetDistance: 0
 --- !u!4 &308047448 stripped
@@ -670,7 +670,7 @@ GameObject:
   - component: {fileID: 372870418}
   - component: {fileID: 372870417}
   - component: {fileID: 372870416}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -885,7 +885,7 @@ GameObject:
   - component: {fileID: 565914268}
   - component: {fileID: 565914267}
   - component: {fileID: 565914266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1298,7 +1298,7 @@ GameObject:
   - component: {fileID: 944320359}
   - component: {fileID: 944320358}
   - component: {fileID: 944320357}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1710,7 +1710,7 @@ GameObject:
   - component: {fileID: 1404275567}
   - component: {fileID: 1404275566}
   - component: {fileID: 1404275565}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3414,10 +3414,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2013105190121388777, guid: 54153b379cd92394bb5e87397e291a8f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890809844225035324, guid: 54153b379cd92394bb5e87397e291a8f, type: 3}
+      propertyPath: sceneTarget
+      value: FinalTestMarketplace
+      objectReference: {fileID: 0}
     - target: {fileID: 8377331291395348351, guid: 54153b379cd92394bb5e87397e291a8f, type: 3}
       propertyPath: id
       value: 9000
       objectReference: {fileID: 0}
+    - target: {fileID: 8377331291395348351, guid: 54153b379cd92394bb5e87397e291a8f, type: 3}
+      propertyPath: actions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377331291395348351, guid: 54153b379cd92394bb5e87397e291a8f, type: 3}
+      propertyPath: actions.Array.data[0]
+      value: 
+      objectReference: {fileID: 4593932666132821103}
     - target: {fileID: 8489320356327092612, guid: 54153b379cd92394bb5e87397e291a8f, type: 3}
       propertyPath: m_Name
       value: Door
@@ -3427,6 +3443,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54153b379cd92394bb5e87397e291a8f, type: 3}
+--- !u!114 &4593932666132821103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5890809844225035324, guid: 54153b379cd92394bb5e87397e291a8f, type: 3}
+  m_PrefabInstance: {fileID: 4593932666132821102}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ec24bd036950c44cae06a681b964939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4868831614375153123 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9194345435602972186, guid: 632b0c7a13c1a944db304a112d02fd46, type: 3}
@@ -3668,7 +3695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7420334487755492882, guid: fc32f7f90b07b41ae9a32a71dc692e5d, type: 3}
       propertyPath: spawnEntries.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7420334487755492882, guid: fc32f7f90b07b41ae9a32a71dc692e5d, type: 3}
       propertyPath: spawnEntries.Array.data[0].spawnDir.x
@@ -3680,11 +3707,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7420334487755492882, guid: fc32f7f90b07b41ae9a32a71dc692e5d, type: 3}
       propertyPath: spawnEntries.Array.data[0].spawnDir.z
-      value: -1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7420334487755492882, guid: fc32f7f90b07b41ae9a32a71dc692e5d, type: 3}
       propertyPath: spawnEntries.Array.data[0].spawnPos.x
-      value: 17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7420334487755492882, guid: fc32f7f90b07b41ae9a32a71dc692e5d, type: 3}
       propertyPath: spawnEntries.Array.data[0].spawnPos.y
@@ -3692,11 +3719,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7420334487755492882, guid: fc32f7f90b07b41ae9a32a71dc692e5d, type: 3}
       propertyPath: spawnEntries.Array.data[0].spawnPos.z
-      value: 23.5
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 7420334487755492882, guid: fc32f7f90b07b41ae9a32a71dc692e5d, type: 3}
       propertyPath: spawnEntries.Array.data[0].prevSceneName
-      value: DemoSceneTwo
+      value: FinalTestMarketplace
       objectReference: {fileID: 0}
     - target: {fileID: 9074198057315963441, guid: fc32f7f90b07b41ae9a32a71dc692e5d, type: 3}
       propertyPath: m_Name
@@ -3988,8 +4015,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: 8bf5ab6a18f9d4f389830c76d56f5bd5, type: 3}
-  minPitch: 0.7
-  maxPitch: 0.7
+  minPitch: 0.9
+  maxPitch: 0.9
   isMusic: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
