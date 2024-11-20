@@ -20,6 +20,7 @@ public class PauseMenu : MonoBehaviour
 
     [Header("Quest Panel")]
     [SerializeField] private TMP_Text questDescriptionText; // Reference to display current quest step description
+    [SerializeField] private TMP_Text questTitleText; // Reference to display current quest title description
     [SerializeField] private Button nextButton;
     [SerializeField] private Button previousButton;
 
@@ -144,6 +145,7 @@ public class PauseMenu : MonoBehaviour
         // If there are no active quests
         if (activeQuests == null || activeQuests.Count == 0)
         {
+            questTitleText.text = "";
             questDescriptionText.text = "No active mysteries.";
             nextButton.gameObject.SetActive(false);
             previousButton.gameObject.SetActive(false);
@@ -173,7 +175,8 @@ public class PauseMenu : MonoBehaviour
 
         if (currentStep != null)
         {
-            questDescriptionText.text = $"Mystery #{currentQuest.QuestID}: {currentStep.description}";
+            questTitleText.text = $"{currentQuest.QuestTitle}";
+            questDescriptionText.text = $"{currentStep.description}";
         }
     }
 

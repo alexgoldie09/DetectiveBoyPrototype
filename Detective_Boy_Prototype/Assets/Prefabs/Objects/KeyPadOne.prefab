@@ -1786,7 +1786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionIndex: 0
-  correctCode: 3579
+  correctCode: 343
   displayText: {fileID: 8099550798268739019}
 --- !u!1 &3480207008695831676
 GameObject:

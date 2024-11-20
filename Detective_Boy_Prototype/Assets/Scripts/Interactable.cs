@@ -13,6 +13,7 @@ public class Interactable : MonoBehaviour
     [Header("Interaction variables")]
     [SerializeField] private float interactionDistance = 2f; // Set the distance threshold
     [SerializeField] private GameObject displayUI; // Reference to the interactable text
+    [SerializeField] private GameObject questUI; // Reference to the quest UI
     [SerializeField] private TextMeshProUGUI displayText; // Reference to the display text
     [SerializeField] private string defaultMessage = ""; // Reference to the message for text
 
@@ -23,8 +24,12 @@ public class Interactable : MonoBehaviour
 
     private void Start()
     {
-        displayUI.SetActive(false);
-        displayText.text = defaultMessage;
+        if (displayUI != null)
+        {
+            displayUI.SetActive(false);
+            displayText.text = defaultMessage;
+        }
+        
 
         if(player == null)
         {
@@ -39,9 +44,17 @@ public class Interactable : MonoBehaviour
 
     private void Update()
     {
-        if (displayUI.activeSelf)
+        if (displayUI != null)
         {
-            Interact();
+            if (displayUI.activeSelf)
+            {
+                Interact();
+            }
+        }
+
+        if(questUI != null && questUI.activeSelf)
+        {
+            questUI.transform.rotation = Quaternion.LookRotation(transform.position - mainCam.transform.position);
         }
     }
 

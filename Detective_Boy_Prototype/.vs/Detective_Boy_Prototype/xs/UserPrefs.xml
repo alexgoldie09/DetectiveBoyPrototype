@@ -1,29 +1,31 @@
 ﻿<Properties StartupConfiguration="{1BF01CE5-57BB-C557-4281-7FBF3B7158A3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Base Class/Quest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Base Class/KeypadUIController.cs">
     <Files>
       <File FileName="Assets/Scripts/Actions/EndGame_Actions.cs" />
       <File FileName="Assets/Scripts/Actions/Item_Actions.cs" />
       <File FileName="Assets/Scripts/Scriptable Object/ItemDatabase.cs" />
       <File FileName="Assets/Scripts/Actions/CheckInventory_Actions.cs" />
-      <File FileName="Assets/Scripts/Managers/DataManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="209" Column="18" />
+      <File FileName="Assets/Scripts/Managers/DataManager.cs" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" />
       <File FileName="Assets/Scripts/Base Class/InventoryUI.cs" />
       <File FileName="Assets/Scripts/Scriptable Object/Inventory.cs" />
       <File FileName="Assets/CustomInspector/Editor/InventoryEditor.cs" />
       <File FileName="Assets/Scripts/Base Class/Item.cs" />
-      <File FileName="Assets/Scripts/Base Class/PauseMenu.cs" />
-      <File FileName="Assets/Scripts/Base Class/Quest.cs" Line="8" Column="35" />
+      <File FileName="Assets/Scripts/Base Class/PauseMenu.cs" Line="178" Column="64" />
+      <File FileName="Assets/Scripts/Base Class/Quest.cs" Line="20" Column="6" />
       <File FileName="Assets/Scripts/Base Class/QuestStep.cs" />
       <File FileName="Assets/Scripts/Base Class/UIVolumeSlider.cs" />
       <File FileName="Assets/Scripts/Extensions/Extensions.cs" />
       <File FileName="Assets/Scripts/Base Class/MainCanvas.cs" />
       <File FileName="Assets/Scripts/Base Class/LimitMinimapCam.cs" />
-      <File FileName="Assets/Scripts/NPC/NPCController.cs" Line="127" Column="6" />
-      <File FileName="Assets/Scripts/Actions/Examine_Actions.cs" Line="59" Column="74" />
-      <File FileName="Assets/Scripts/Actions/ChangeScene_Actions.cs" Line="16" Column="52" />
-      <File FileName="Assets/Scripts/Managers/LevelManager.cs" Line="38" Column="10" />
-      <File FileName="Assets/Scripts/Interactable.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Actions/Quest_Actions.cs" Line="111" Column="82" />
+      <File FileName="Assets/Scripts/NPC/NPCController.cs" />
+      <File FileName="Assets/Scripts/Actions/Examine_Actions.cs" />
+      <File FileName="Assets/Scripts/Actions/ChangeScene_Actions.cs" />
+      <File FileName="Assets/Scripts/Managers/LevelManager.cs" />
+      <File FileName="Assets/Scripts/Interactable.cs" Line="53" Column="10" />
+      <File FileName="Assets/Scripts/Actions/Quest_Actions.cs" Line="76" Column="81" />
+      <File FileName="Assets/Scripts/Actions/Activate_Actions.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Base Class/KeypadUIController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -33,7 +35,7 @@
               <Node name="Scripts" expanded="True">
                 <Node name="Actions" expanded="True" />
                 <Node name="Base Class" expanded="True">
-                  <Node name="Quest.cs" selected="True" />
+                  <Node name="KeypadUIController.cs" selected="True" />
                 </Node>
                 <Node name="Extensions" expanded="True" />
                 <Node name="Managers" expanded="True" />
@@ -45,11 +47,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9c06d60c-74e0-4e7a-946b-ef97ed09fd2e" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8cf2d6f1-08bc-4e8f-851c-28eb5f0b450a" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

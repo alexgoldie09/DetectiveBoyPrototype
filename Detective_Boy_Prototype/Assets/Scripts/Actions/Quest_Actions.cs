@@ -8,6 +8,7 @@ public class Quest_Actions : Actions
 {
     [Header("Adding Quest")]
     [SerializeField] private int questId; // Reference to quest ID
+    [SerializeField] private string questTitle; // Reference to quest title
     [SerializeField] private List<QuestStep> questSteps = new List<QuestStep>(); // Reference to the quest steps
     [SerializeField] private bool receiveQuest; // Reference to whether you are receiving a quest
     [SerializeField] private GameObject questCanvas; // Reference to the quest icon
@@ -18,23 +19,18 @@ public class Quest_Actions : Actions
     {
         if (questCanvas != null)
         {
-            // Check if the quest exists and is incomplete
+            // Check if the quest exists in the DataManager
             if (DataManager.instance.quests.ContainsKey(questId))
             {
-                // If the quest is complete, hide the icon
-                if (DataManager.instance.quests[questId].IsComplete)
-                {
-                    questCanvas.SetActive(false);
-                }
-                else
-                {
-                    questCanvas.SetActive(receiveQuest);
-                }
+                // If the quest exists, hide the canvas
+                questCanvas.SetActive(false);
+                Debug.Log($"Quest {questId} already exists. Hiding quest icon.");
             }
             else
             {
-                // Quest does not exist, show the icon if set to receiveQuest
+                // If the quest does not exist, show the canvas if set to receiveQuest
                 questCanvas.SetActive(receiveQuest);
+                Debug.Log($"Quest {questId} does not exist. Icon visibility set to {receiveQuest}.");
             }
         }
     }
@@ -77,7 +73,7 @@ public class Quest_Actions : Actions
     {
         if (!DataManager.instance.quests.ContainsKey(questId))
         {
-            DataManager.instance.quests[questId] = new Quest(questId);
+            DataManager.instance.quests[questId] = new Quest(questId, questTitle);
             Debug.Log($"Added quest #{questId}");
         }
     }
