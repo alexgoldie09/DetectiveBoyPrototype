@@ -15,7 +15,7 @@ MonoBehaviour:
   items:
   - itemId: 0
     itemName: Clue One
-    itemDescription: 'Log History: "Larry accessed locker at 10:30pm"'
+    itemDescription: 'Log History: "Larry accessed locker at 10:30pm".'
     itemSprite: {fileID: 21300000, guid: c33c6ae4ffbbdc8439f47c9811ec4064, type: 3}
     allowMultiple: 0
     isReward: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
     amount: 0
   - itemId: 1
     itemName: Clue Two
-    itemDescription: 'CCTV Footage: "Male appeared at locker"'
+    itemDescription: 'CCTV Footage: "Male appeared at locker".'
     itemSprite: {fileID: 21300000, guid: a67d80a1e6dd824409cb30f62dc28448, type: 3}
     allowMultiple: 0
     isReward: 0
@@ -31,8 +31,16 @@ MonoBehaviour:
     amount: 0
   - itemId: 2
     itemName: Special Flour
-    itemDescription: Special flour bag from bakery
+    itemDescription: Special flour bag from bakery.
     itemSprite: {fileID: 21300000, guid: b510deb155efddf49bc1d00839a57356, type: 3}
+    allowMultiple: 0
+    isReward: 0
+    questId: 0
+    amount: 0
+  - itemId: 3
+    itemName: Winters Bread
+    itemDescription: Bread from Winters looks like an item from the list.
+    itemSprite: {fileID: 21300000, guid: 54240df153d2a504c881cd6d40d2b829, type: 3}
     allowMultiple: 0
     isReward: 1
     questId: 2
@@ -41,3 +49,4 @@ MonoBehaviour:
   - Clue One
   - Clue Two
   - Special Flour
+  - Winters Bread

@@ -64,7 +64,6 @@ public class Quest_Actions : Actions
         {
             // Completing quest steps
             CompleteSteps();
-            Debug.Log($"Checked steps for quest {questId}. Quest completion status: {DataManager.instance.quests[questId].IsComplete}");
 
         }
     }
