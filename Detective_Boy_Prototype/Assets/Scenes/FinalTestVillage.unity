@@ -4006,7 +4006,7 @@ MonoBehaviour:
   questSteps: []
   receiveQuest: 0
   questCanvas: {fileID: 0}
-  stepId: 1
+  stepIds: 01000000
 --- !u!4 &4868831614375153123 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9194345435602972186, guid: 632b0c7a13c1a944db304a112d02fd46, type: 3}
@@ -4031,7 +4031,7 @@ MonoBehaviour:
     description: Go to Marketplace.
   receiveQuest: 1
   questCanvas: {fileID: 1305054122}
-  stepId: 0
+  stepIds: 
 --- !u!1001 &5655160824481201719
 PrefabInstance:
   m_ObjectHideFlags: 0

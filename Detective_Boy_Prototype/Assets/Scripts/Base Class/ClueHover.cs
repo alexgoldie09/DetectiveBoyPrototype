@@ -75,7 +75,16 @@ public class ClueHover : MonoBehaviour
     {
         Debug.Log("Interacting with Clue: " + currentClue.ClueId);
         currentClue.ItemProducedAction.Act();
-        currentClue.gameObject.SetActive(false);
+        StartCoroutine(DelayedDeactivation(currentClue.gameObject, false, 0.1f));
         // You could add more functionality here, e.g., collecting or examining the clue
+    }
+
+    private IEnumerator DelayedDeactivation(GameObject target, bool isActive, float delay)
+    {
+        // Wait for the specified delay
+        yield return new WaitForSeconds(delay);
+
+        // Set the active state
+        target.SetActive(isActive);
     }
 }

@@ -13,7 +13,7 @@ public class Quest_Actions : Actions
     [SerializeField] private bool receiveQuest; // Reference to whether you are receiving a quest
     [SerializeField] private GameObject questCanvas; // Reference to the quest icon
     [Header("Completing Step")]
-    [SerializeField] private int stepId; // Reference to step to complete
+    [SerializeField] private List<int> stepIds = new List<int>(); // List of steps to complete
 
     private void Start()
     {
@@ -62,9 +62,9 @@ public class Quest_Actions : Actions
         }
         else
         {
-            // Completing a quest step
-            CompleteStep();
-            Debug.Log($"Quest {questId} is complete: {DataManager.instance.quests[questId].IsComplete}");
+            // Completing quest steps
+            CompleteSteps();
+            Debug.Log($"Checked steps for quest {questId}. Quest completion status: {DataManager.instance.quests[questId].IsComplete}");
 
         }
     }
@@ -108,27 +108,37 @@ public class Quest_Actions : Actions
         }
     }
 
-    public void CompleteStep()
+    public void CompleteSteps()
     {
         if (DataManager.instance.quests.ContainsKey(questId))
         {
             var quest = DataManager.instance.quests[questId];
-            var step = DataManager.instance.quests[questId].Steps.Find(s => s.stepId == stepId);
-            if (step != null && !step.IsComplete)
+
+            foreach (int id in stepIds)
             {
-                step.IsComplete = true;
-                Debug.Log($"Step {step.stepId} has been completed.");
-                // Check if all steps are complete and update the IsComplete property
-                if (quest.Steps.All(s => s.IsComplete))
+                var step = quest.Steps.Find(s => s.stepId == id);
+
+                if (step != null && !step.IsComplete)
                 {
-                    quest.IsComplete = true;
-                    Debug.Log($"Quest {questId} is now complete!");
+                    step.IsComplete = true;
+                    Debug.Log($"Step {step.stepId} has been completed.");
+                }
+                else
+                {
+                    Debug.LogWarning($"Step {id} is already complete or does not exist.");
                 }
             }
-            else
+
+            // Check if all steps are complete and update the quest's status
+            if (quest.Steps.All(s => s.IsComplete))
             {
-                Debug.Log("Step is finished or does not exist.");
+                quest.IsComplete = true;
+                Debug.Log($"Quest {questId} is now complete!");
             }
+        }
+        else
+        {
+            Debug.LogWarning($"Quest {questId} does not exist.");
         }
     }
 }

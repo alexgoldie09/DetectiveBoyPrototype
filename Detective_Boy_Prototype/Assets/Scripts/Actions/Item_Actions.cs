@@ -68,6 +68,10 @@ public class Item_Actions : Actions
                 {
                     ReceiveItem(itemAmountOwned);
                 }
+                else if (!currentItem.IsReward)
+                {
+                    ReceiveItem(itemAmountOwned);
+                }
                 else
                 {
                     // Already have, invoke actions
