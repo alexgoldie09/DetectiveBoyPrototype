@@ -13,12 +13,4 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   itemDatabase: {fileID: 11400000, guid: 1dffe43ac3bdeb54ebd89f2c2ab0d8de, type: 2}
-  inventoryList:
-  - itemId: 3
-    itemName: Winters Bread
-    itemDescription: Bread from Winters looks like an item from the list.
-    itemSprite: {fileID: 21300000, guid: 54240df153d2a504c881cd6d40d2b829, type: 3}
-    allowMultiple: 0
-    isReward: 1
-    questId: 2
-    amount: 1
+  inventoryList: []

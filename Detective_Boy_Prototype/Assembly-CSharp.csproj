@@ -60,6 +60,7 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.32f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/Base Class/SceneTransition.cs" />
     <Compile Include="Assets/Scripts/Actions/Animation_Actions.cs" />
     <Compile Include="Assets/Scripts/Base Class/QuestStep.cs" />
     <Compile Include="Assets/Scripts/Managers/DataManager.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Assets/Scripts/Player/PlayerController.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" />
+    <Compile Include="Assets/Scripts/Base Class/MainMenu.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
     <Compile Include="Assets/Supercyan Character Pack Free Sample/Scripts/DemoFree.cs" />
