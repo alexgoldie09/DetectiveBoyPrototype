@@ -16,10 +16,10 @@ public class PlayerController : MonoBehaviour
     private float inputX, inputY; // Reference to movement variables
     private Vector3 moveDir; // Reference to move direction
 
-    [Header("Jump variables")]
-    [SerializeField] private float jumpForce = 8; // Reference to player jump force
-    [SerializeField] private float jumpCooldown = 0.5f; // Reference to jump cooldown
-    private bool readyToJump = true; // Reference to whether can jump again
+    //[Header("Jump variables")]
+    //[SerializeField] private float jumpForce = 8; // Reference to player jump force
+    //[SerializeField] private float jumpCooldown = 0.5f; // Reference to jump cooldown
+    //private bool readyToJump = true; // Reference to whether can jump again
 
     [Header("Ground check variables")]
     [SerializeField] private Transform groundCheck; // Assign a transform slightly below the player
@@ -31,7 +31,10 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
+        if (anim == null)
+        {
+            anim = GetComponent<Animator>();
+        }
     }
 
     private void FixedUpdate()
@@ -69,6 +72,15 @@ public class PlayerController : MonoBehaviour
             rb.drag = 0;
         }
 
+        if(Extensions.isTalking)
+        {
+            anim.SetBool("isTalking", true);
+        }
+        else
+        {
+            anim.SetBool("isTalking", false);
+        }
+
         // Call OnClick
         //if (Input.GetMouseButtonDown(0))
         //{
@@ -82,13 +94,13 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        // Check when to jump
-        if (Input.GetKeyDown(KeyCode.Space) && readyToJump && IsGrounded())
-        {
-            Jump();
+        //// Check when to jump
+        //if (Input.GetKeyDown(KeyCode.Space) && readyToJump && IsGrounded())
+        //{
+        //    Jump();
 
-            StartCoroutine(ResetJump());
-        }
+        //    StartCoroutine(ResetJump());
+        //}
 
         // Factor for increase movement speed
         if (Input.GetKey(KeyCode.LeftShift) && IsGrounded())
@@ -142,21 +154,21 @@ public class PlayerController : MonoBehaviour
     }
 
     // Funtion for jumping
-    private void Jump()
-    {
-        // Reset y velocity
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+    //private void Jump()
+    //{
+    //    // Reset y velocity
+    //    rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
-        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-    }
+    //    rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+    //}
 
     // Function for reset jump
-    private IEnumerator ResetJump()
-    {
-        readyToJump = false;
-        yield return new WaitForSeconds(jumpCooldown);
-        readyToJump = true;
-    }
+    //private IEnumerator ResetJump()
+    //{
+    //    readyToJump = false;
+    //    yield return new WaitForSeconds(jumpCooldown);
+    //    readyToJump = true;
+    //}
 
     // Function for OnClick
     //private void OnClick()

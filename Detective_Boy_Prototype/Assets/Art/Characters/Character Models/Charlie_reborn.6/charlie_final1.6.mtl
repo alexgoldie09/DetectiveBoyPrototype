@@ -1,0 +1,34 @@
+# Apple ModelI/O MTL File: charlie_final1.6.mtl
+
+newmtl standardSurface5SG
+	map_Kd standardSurface5SG-color.png
+	Kd 1 1 1
+	Ka 0 0 0
+	Ks 0
+	ao 0
+	subsurface 0
+	map_metallic standardSurface5SG-metallic.png
+	specularTint 0
+	map_roughness standardSurface5SG-roughness.png
+	anisotropicRotation 0
+	sheen 0.05
+	sheenTint 0
+	clearCoat 0
+	clearCoatGloss 0
+
+newmtl standardSurface4SG
+	map_Kd standardSurface4SG-color.png
+	Kd 1 1 1
+	Ka 0 0 0
+	Ks 0
+	ao 0
+	subsurface 0
+	map_metallic standardSurface4SG-metallic.png
+	specularTint 0
+	map_roughness standardSurface4SG-roughness.png
+	anisotropicRotation 0
+	sheen 0.05
+	sheenTint 0
+	clearCoat 0
+	clearCoatGloss 0
+

@@ -13,6 +13,11 @@ public class Message_Actions : Actions
 
     public override void Act()
     {
+        if (GetComponent<Interactable>() != null)
+        {
+            Extensions.interactableId = GetComponent<Interactable>().Id;
+        }
+
         DialogueManager.instance.ShowMessages(messages, enableDialog, interrogateActions, accuseActions, interrogateMessage, accuseMessage);
     }
 }

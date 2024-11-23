@@ -9,6 +9,7 @@ public class NPCController : MonoBehaviour
     [Header("References")]
     [SerializeField] private Animator anim; // Assign the NPC's Animator component
     [SerializeField] private NavMeshAgent agent; // Reference to NPC's navmesh
+    [SerializeField] private bool canWave; // Reference to if the NPC can wave
 
     [Header("Patrol variables")]
     [SerializeField] private Transform player; // Assign the player's transform in the inspector
@@ -20,6 +21,7 @@ public class NPCController : MonoBehaviour
     private int lastPatrolPointIndex = -1; // Store last patrol point index
     private bool isWaiting = false; // Reference to if the NPC is waiting
     private bool playerInRange = false; // Reference to if the player is in range
+    private bool hasTriggeredAnimation = false; // Tracks if the animation has been triggered
 
     // Start is called before the first frame update
     private void Start()
@@ -46,6 +48,12 @@ public class NPCController : MonoBehaviour
         float distanceToPlayer = CheckDistanceToPlayer();
         if (distanceToPlayer < interactionDistance)
         {
+            if (!hasTriggeredAnimation && canWave)
+            {
+                TriggerAnimationOnce(); // Trigger the animation
+                hasTriggeredAnimation = true; // Mark the animation as triggered
+            }
+
             StopAndLookAtPlayer();
             playerInRange = true;
         }
@@ -53,6 +61,7 @@ public class NPCController : MonoBehaviour
         {
             ResumePatrol();
             playerInRange = false;
+            hasTriggeredAnimation = false; // Reset the flag when the player leaves range
         }
         else if (!isWaiting && !agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
@@ -159,6 +168,13 @@ public class NPCController : MonoBehaviour
         }
     }
 
+    // Function to trigger the animation only once
+    private void TriggerAnimationOnce()
+    {
+        // Trigger your desired animation
+        anim.SetTrigger("Wave");
+    }
+
     private void UpdateAnimation()
     {
         if (agent.velocity.sqrMagnitude > 0.1f && !agent.isStopped)
@@ -168,6 +184,16 @@ public class NPCController : MonoBehaviour
         else
         {
             anim.SetBool("isWalking", false);
+        }
+
+        if(Extensions.isTalking && GetComponent<Interactable>().Id == Extensions.interactableId)
+        {
+            anim.SetBool("isWalking", false);
+            anim.SetBool("isTalking", true);
+        }
+        else
+        {
+            anim.SetBool("isTalking", false);
         }
     }
 
