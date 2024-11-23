@@ -28,7 +28,7 @@ public class Animation_Actions : Actions
 
     private IEnumerator Animate()
     {
-        Extensions.isTalking = true;
+        //Extensions.isTalking = true;
 
         int i = 0;
 
@@ -44,7 +44,7 @@ public class Animation_Actions : Actions
             yield return new WaitForSeconds(anim.GetNextAnimatorStateInfo(0).length);
         }
 
-        Extensions.isTalking = false;
+        //Extensions.isTalking = false;
 
         for(int j = 0; j < actionList.Count; j++)
         {

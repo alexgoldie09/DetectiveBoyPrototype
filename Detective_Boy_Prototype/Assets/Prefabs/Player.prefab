@@ -356,7 +356,7 @@ MonoBehaviour:
   anim: {fileID: 4534821578219615014}
   moveSpeed: 5
   interpolation: 8
-  walkScale: 1.1
+  walkScale: 2
   groundCheck: {fileID: 6317246698453882518}
   groundCheckDistance: 0.2
   groundMask:
@@ -524,7 +524,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1386815908276232722}
-  - component: {fileID: 4698044144681877146}
   m_Layer: 7
   m_Name: Breathing Idle
   m_TagString: Untagged
@@ -550,27 +549,6 @@ Transform:
   - {fileID: 323552249001738210}
   m_Father: {fileID: 4145367142467110703}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &4698044144681877146
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 907485823534311654}
-  m_Enabled: 0
-  m_Avatar: {fileID: 9000000, guid: 62cc1a75724284ed599c24c4be775eca, type: 3}
-  m_Controller: {fileID: 9100000, guid: 7db159da91ec84972ba4d4ac0aceb275, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1128526633837877992
 GameObject:
   m_ObjectHideFlags: 0

@@ -100,6 +100,18 @@ public class AudioManager : MonoBehaviour
         StartCoroutine(ReEnqueueAfterPlay(audio));
     }
 
+    // New method to stop all SFX
+    public void StopSfx()
+    {
+        foreach (AudioSource audio in sfxLib)
+        {
+            if (audio.isPlaying)
+            {
+                audio.Stop();
+            }
+        }
+    }
+
     private IEnumerator ReEnqueueAfterPlay(AudioSource audio)
     {
         // Wait until the audio clip has finished playing

@@ -4,7 +4,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC/NPCController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player/PlayerController.cs">
     <Files>
       <File FileName="Assets/Scripts/Actions/EndGame_Actions.cs" />
       <File FileName="Assets/Scripts/Actions/Item_Actions.cs" />
@@ -20,31 +20,36 @@
       <File FileName="Assets/Scripts/Base Class/Quest.cs" />
       <File FileName="Assets/Scripts/Base Class/QuestStep.cs" />
       <File FileName="Assets/Scripts/Base Class/UIVolumeSlider.cs" />
-      <File FileName="Assets/Scripts/Extensions/Extensions.cs" Line="11" Column="38" />
+      <File FileName="Assets/Scripts/Extensions/Extensions.cs" />
       <File FileName="Assets/Scripts/Base Class/MainCanvas.cs" />
       <File FileName="Assets/Scripts/Base Class/LimitMinimapCam.cs" />
-      <File FileName="Assets/Scripts/NPC/NPCController.cs" Line="189" Column="97" />
+      <File FileName="Assets/Scripts/NPC/NPCController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Actions/Examine_Actions.cs" />
       <File FileName="Assets/Scripts/Actions/ChangeScene_Actions.cs" />
       <File FileName="Assets/Scripts/Managers/LevelManager.cs" />
-      <File FileName="Assets/Scripts/Interactable.cs" Line="108" Column="2" />
+      <File FileName="Assets/Scripts/Interactable.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Actions/Quest_Actions.cs" />
       <File FileName="Assets/Scripts/Actions/Activate_Actions.cs" />
       <File FileName="Assets/Scripts/Base Class/KeypadUIController.cs" />
       <File FileName="Assets/Scripts/Base Class/CutsceneController.cs" />
       <File FileName="Assets/Scripts/Base Class/SceneTransition.cs" />
       <File FileName="Assets/Scripts/Base Class/MainMenu.cs" />
-      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="81" Column="46" />
-      <File FileName="Assets/Scripts/Actions/Message_Actions.cs" Line="20" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerController.cs" Line="154" Column="6" />
+      <File FileName="Assets/Scripts/Actions/Message_Actions.cs" />
+      <File FileName="Assets/Scripts/Actions/Animation_Actions.cs" Line="47" Column="11" />
+      <File FileName="Assets/Scripts/Actions/Audio_Actions.cs" Line="33" Column="6" />
+      <File FileName="Assets/Scripts/Managers/AudioManager.cs" Line="113" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Detective_Boy_Prototype" expanded="True">
+          <Node name="Detective_Boy_Prototype">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Actions" expanded="True" />
+                <Node name="Managers" expanded="True" />
                 <Node name="NPC" expanded="True" />
+                <Node name="Player" expanded="True" />
               </Node>
               <Node name="Supercyan Character Pack Animal People Sample" expanded="True" />
             </Node>

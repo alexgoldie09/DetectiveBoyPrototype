@@ -25,4 +25,10 @@ public class Audio_Actions : Actions
             }
         }
     }
+
+    // New method to stop the sound effects
+    public void StopFx()
+    {
+        AudioManager.instance.StopSfx();
+    }
 }

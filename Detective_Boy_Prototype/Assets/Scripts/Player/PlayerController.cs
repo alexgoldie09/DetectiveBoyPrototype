@@ -88,56 +88,69 @@ public class PlayerController : MonoBehaviour
         //}
     }
 
-    // Function for accepting player input
     private void MyInput()
     {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        //// Check when to jump
-        //if (Input.GetKeyDown(KeyCode.Space) && readyToJump && IsGrounded())
-        //{
-        //    Jump();
-
-        //    StartCoroutine(ResetJump());
-        //}
-
-        // Factor for increase movement speed
+        // Factor for increased movement speed (walking or running)
         if (Input.GetKey(KeyCode.LeftShift) && IsGrounded())
         {
-            inputY *= walkScale;
-            inputX *= walkScale;
+            x *= walkScale;
+            y *= walkScale;
         }
 
-        inputY = Mathf.Lerp(inputY, y, Time.deltaTime * interpolation);
-        inputX = Mathf.Lerp(inputX, x, Time.deltaTime * interpolation);
+        // Dynamic interpolation for quicker zero reset
+        float lerpSpeed = Mathf.Abs(x) > 0 || Mathf.Abs(y) > 0 ? interpolation : interpolation * 2;
+
+        inputY = Mathf.Lerp(inputY, y, Time.deltaTime * lerpSpeed);
+        inputX = Mathf.Lerp(inputX, x, Time.deltaTime * lerpSpeed);
+
+        // Ensure small values snap to zero
+        if (Mathf.Abs(inputY) < 0.01f) inputY = 0;
+        if (Mathf.Abs(inputX) < 0.01f) inputX = 0;
     }
 
-    // Function for moving player
     private void MovePlayer()
     {
         // Call input function
         MyInput();
 
-        // Call speed control
-        SpeedControl();
-
         // Calculate movement direction
         Vector3 currentDir = orientation.forward * inputY + orientation.right * inputX;
 
-        float directionLength = currentDir.magnitude;
-        currentDir.y = 0;
-        currentDir = currentDir.normalized * directionLength;
+        // Normalize to prevent diagonal speed increase
+        if (currentDir.magnitude > 1)
+        {
+            currentDir = currentDir.normalized;
+        }
 
-        // Move player using physics
+        // Apply walkScale only when Left Shift is pressed
+        if (Input.GetKey(KeyCode.LeftShift) && IsGrounded())
+        {
+            currentDir *= walkScale;
+        }
+
         if (currentDir != Vector3.zero)
         {
+            // Smoothly adjust movement direction
             moveDir = Vector3.Slerp(moveDir, currentDir, Time.deltaTime * interpolation);
 
+            // Apply movement force
             rb.AddForce(moveDir * moveSpeed * 10f, ForceMode.Force);
-            // Set animator
+
+            // Update animation with movement speed
             anim.SetFloat("MoveSpeed", currentDir.magnitude);
         }
+        else
+        {
+            // Reset MoveSpeed to 0 when idle
+            moveDir = Vector3.zero;
+            anim.SetFloat("MoveSpeed", 0);
+        }
+
+        // Control the speed to ensure it doesn't exceed moveSpeed
+        SpeedControl();
     }
 
     // Function for controlling speed

@@ -62,10 +62,13 @@ public class Interactable : MonoBehaviour
     {
         displayUI.transform.rotation = Quaternion.LookRotation(transform.position - mainCam.transform.position);
 
-        if (Input.GetKeyDown(KeyCode.E) && CheckDistanceToPlayer() < interactionDistance)
+        if (!Extensions.isTalking)
         {
-            displayUI.SetActive(false);
-            StartCoroutine(ExecuteActionList());
+            if (Input.GetKeyDown(KeyCode.E) && CheckDistanceToPlayer() < interactionDistance)
+            {
+                displayUI.SetActive(false);
+                StartCoroutine(ExecuteActionList());
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
